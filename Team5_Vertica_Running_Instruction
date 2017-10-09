@@ -1,0 +1,11 @@
+Team 5 Vertica Running Instruction 
+
+1) Compile the java codes
+
+2) Run the RQ_CALL.java by typing in this line in the terminal: java RQ_CALL i j K
+ 
+3) You can set the i j K value corresponding to the i j k on the last line. 
+
+4) The result will be stored into the res table on my local database. 
+
+5) The installation of the tables on the server side will be done later before Friday.  
