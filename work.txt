@@ -1,4 +1,0 @@
-mysql workbench
-apache mySQL
-SQLite
-
