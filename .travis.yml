@@ -1,0 +1,8 @@
+language: java
+script: mvn clean compile -DskiptTests
+notifications:
+  email:
+    - garrycui0331@gmail.com
+    - naveenchalawadi@gmail.com
+    - justinkaugustine1987@gmail.com
+    - snikkis31@gmail.com
