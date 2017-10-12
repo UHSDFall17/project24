@@ -1,15 +1,16 @@
-package trello;
+package Group24.Trello;
+
 
 import java.util.Scanner;
 
-public class user {
+public class User {
 
 private String username;
 private String fname, lname;
 private char pwd[]; 
 private String company;
 private String emailID;
-private int	phnum;
+private long phnum;
 
 public String getEmailID() {
 	return emailID;
@@ -48,37 +49,36 @@ public String getCompany() {
 public void setCompany(String company) {
 	this.company = company;
 }
-public int getPhnum() {
+public long getPhnum() {
 	return phnum;
 }
-public void setPhnum(int phnum) {
+public void setPhnum(long phnum) {
 	this.phnum = phnum;
 }
 
 
-public void usercreds() {
-	boolean i=true;
-	
-	Scanner sc = new Scanner(System.in);
-	
-	System.out.println("Enter your username:" );
-	String username=sc.nextLine();
-	setUsername(username);
-	
-while(i) {		
-		System.out.println("Enter your 8 character password");
-		char [] pwd=sc.next().toCharArray();
-		setPwd(pwd);
-		
-		if(pwd.length > 8) {
-		System.out.println("Password should be of 8 characters");
-		i=true;
-		}
-		else {
-		System.out.println("Welcome!!");
-		i=false;
-		}
-		}			
+public void username () {
+
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Enter your username:");
+    String username = sc.nextLine();
+    setUsername(username);
+    
+}
+
+public boolean CheckPassword(char[] pwd){
+    boolean i = true;
+            if(pwd.length > 8 || pwd.length<8) {
+            System.out.println("Password should be of 8 characters");
+            i=true;
+        }
+        else {
+            System.out.println("Welcome!!");
+            i=false;
+        }
+        return i;
 }
 
 public void userdetails() {
@@ -99,25 +99,21 @@ public void userdetails() {
 	System.out.println("Enter your Organisation");
 	String company= sc.nextLine();
 	setCompany(company);
+    }
 	
-	boolean i=true;
-	
-	while(i) {		
-		System.out.println("Enter your 10 digit phone no.");
-		
-		if(sc.hasNextInt()&& sc.nextInt()>999999999) {
-			int phnum= sc.nextInt();
-			setPhnum(phnum);
-		i=false;	
-		}
-		else {
-			System.out.println("Invalid input!");
-		    sc.next();
-			i=true;
-		}
-	}		
-	
-	
-	}
+public long phnumber(long phnum) {
+	//Scanner sc = new Scanner(System.in);
+	long num=phnum;
+	//System.out.println("Enter your 10 digit phone no.");
+	//long num = sc.nextLong();
 
+	if(num>999999999 && num<10000000000L) {
+	setPhnum(num);
+	return num;
+	}
+	else
+		System.out.println("Invalid phone number");
+	return -1;
+
+}
 }
