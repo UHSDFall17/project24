@@ -2,7 +2,7 @@ language: java
 script: mvn clean compile -DskiptTests
 notifications:
   email:
-    - Guannan_Cui_garrycui0331@gmail.com
-    - Nikhita_Singh_Satish_nsatish@uh.edu
-    - Justine_K_Augustine_jkaugustine@uh.edu
-    - Naveen_Milind_Chalawadi_nchalawadi@uh.edu
+    - garrycui0331@gmail.com
+    - naveenchalawadi@gmail.com
+    - justinkaugustine1987@gmail.com
+    - snikkis31@gmail.com
