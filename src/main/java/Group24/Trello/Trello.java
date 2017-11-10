@@ -6,8 +6,11 @@ package Group24.Trello;
  * and open the template in the editor.
  */
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -19,13 +22,20 @@ public class Trello {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
+
+    	
+    	MysqlCon.DbConnect();
+    	
+    	//-----------------------------------------------------------------------------
+    	
+    	
         FileWriter writer = new FileWriter("output.txt"); 
         PrintWriter printer = new PrintWriter("output.txt");
         Scanner in = new Scanner(System.in);
     
         // TODO code application logic here
-        System.out.println("Welecome to Trello.");
+        //System.out.println("Welecome to Trello.");
         
         ArrayList<Integer> task_UI= new ArrayList();
         ArrayList<String> task_US = new ArrayList();
@@ -72,6 +82,12 @@ public class Trello {
          }
          
          printer.println();
+         
+         Connection con=DriverManager.getConnection(  
+					"jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false","root","trello");  
+         Statement stmt=con.createStatement(); 
+         stmt.executeUpdate("INSERT INTO usercreds " + "VALUES ('" +u.getUsername()+"', '"+u.getPwd()+"');");
+         stmt.executeUpdate("INSERT INTO userdetails " + "VALUES ('" +u.getFname()+"', '"+u.getLname()+"','"+u.getCompany()+"','"+u.getEmailID()+"','"+u.getPhnum()+"','"+u.getUsername()+"');");
          
 //-----------------------------------------------------------------------------
 
