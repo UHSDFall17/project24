@@ -6,8 +6,9 @@ package Group24.Trello;
  * and open the template in the editor.
  */
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -18,8 +19,27 @@ public class Trello {
 
     /**
      * @param args the command line arguments
+     * @throws SQLException 
      */
-    public static void main(String[] args) throws IOException {
+	
+    public static void main(String[] args) throws IOException, SQLException {
+
+        try {
+            MysqlCon connection = new MysqlCon();
+            Connection conn = connection.EstCon();
+        	Statement st = conn.createStatement();
+        /*	ResultSet res = st.executeQuery("select * from  usercreds;");
+        	while (res.next()) { 
+        		System.out.println(res.getInt(1)+"  "+res.getString(2)+"  "+res.getString(3));  
+        	System.out.println(res.getString("fname"));
+        	ResultSetMetaData rsmd = res.getMetaData();
+        	int columnsNumber = rsmd.getColumnCount();
+        	}*/
+        	conn.close();
+        }catch (Exception e) {
+        	e.printStackTrace();
+        }
+       
         FileWriter writer = new FileWriter("output.txt"); 
         PrintWriter printer = new PrintWriter("output.txt");
         Scanner in = new Scanner(System.in);
@@ -38,10 +58,10 @@ public class Trello {
         {
         	System.out.println("Enter your 8 character password");
             Scanner sc = new Scanner(System.in);
-            char[] pwd = sc.next().toCharArray();
+            /*String pwd = sc.next().toString();
 
             i = u.CheckPassword(pwd);
-            u.setPwd(pwd);
+            u.setPwd(pwd);*/
          }
          
          u.userdetails();
@@ -69,22 +89,26 @@ public class Trello {
          for(String str: task_US) 
          {
         	 printer.println(str);
-         }
-         
+         }         
          printer.println();
-         
+        MysqlCon connection = new MysqlCon();
+        Connection conn = connection.EstCon();
+         Statement statement = conn.createStatement();
+         statement.executeUpdate("INSERT INTO usercreds " + "VALUES ('" +u.getUsername()+"', '"+u.getPwd()+"');");
+         statement.executeUpdate("INSERT INTO userdetails " + "VALUES ('" +u.getFname()+"', '"+u.getLname()+"','"+u.getCompany()+"','"+u.getEmailID()+"','"+u.getPhnum()+"','"+u.getUsername()+"');");
+         conn.close();
 //-----------------------------------------------------------------------------
 
          ArrayList<String> task_B = new ArrayList();
          System.out.println("Enter your choice:");
+         Board board=new Board();
          choice:
          {
         	 System.out.println("1. Create a Board");
         	 System.out.println("2. Existing Boards");
-        	 Board board=new Board();
         	 int key = board.enterInt();
         	 
-        	 if(key == 1) 
+        	if(key == 1)
         	 {
             	 board.CreateBoardTitle();
             	 top:{    String S1=board.SetPrivacy();
@@ -93,13 +117,11 @@ public class Trello {
                      }
             	 }
         	 } 
-
         	 else
         	 {
         		 System.out.println("Enter a valid option!! :");
         		 break choice;
-        	 }
-        	 
+        	 }       	 
         	 task_B.add("Board Name: " + board.getBoardName());
         	 task_B.add("Privacy: " + board.getPrivacy());
         	 for(String str: task_B) 
@@ -109,6 +131,7 @@ public class Trello {
          }
          
          printer.println();
+         statement.executeUpdate("INSERT INTO board " + "VALUES ('" +board.getBoardName()+"', '1234567890','"+board.getPrivacy()+"','"+u.getUsername()+"');");
 
 //---------------------------------------------------------------------      
                  
@@ -121,7 +144,7 @@ public class Trello {
 
          System.out.println("Team members");
          ArrayList <String> team_members = Update_Team.teammembers();
-         Team_cre team_cre1 = new Team_cre(team_name, description, team_members);
+         Team_cre team_cre1 = new Team_cre();
 
          task_T.add("Team Name: " + team_name);
          task_T.add("Team Description: " + description);
