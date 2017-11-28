@@ -32,6 +32,6 @@ public class Card {
 	public void setCard_des(String card_des) {
 		this.card_des = card_des;
 	}
-	
-	
+
+
 }

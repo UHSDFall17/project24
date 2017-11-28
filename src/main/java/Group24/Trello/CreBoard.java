@@ -27,6 +27,8 @@ public class CreBoard extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField boardname;
+	Controller c1=new Controller();
+
 
 	/**
 	 * Launch the application.
@@ -54,7 +56,7 @@ public class CreBoard extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel.setForeground(new Color(0, 128, 0));
@@ -62,9 +64,9 @@ public class CreBoard extends JFrame {
 		panel.setBackground(new Color(60, 179, 113));
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
+
 		String usnme = Login.uname;
-		
+
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -76,34 +78,39 @@ public class CreBoard extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
-		
+
 		JLabel lblNewBoard = new JLabel("NEW BOARD");
 		lblNewBoard.setForeground(Color.WHITE);
 		lblNewBoard.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 		lblNewBoard.setBounds(357, 32, 180, 34);
 		panel.add(lblNewBoard);
-		
+
 		JLabel lbBoardName = new JLabel("BOARD NAME:");
 		lbBoardName.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-		lbBoardName.setBounds(327, 178, 123, 20);
+		lbBoardName.setBounds(345, 129, 123, 20);
 		panel.add(lbBoardName);
-		
+
 		JLabel lblPrivacy = new JLabel("PRIVACY:");
 		lblPrivacy.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-		lblPrivacy.setBounds(362, 270, 78, 20);
+		lblPrivacy.setBounds(390, 214, 78, 20);
 		panel.add(lblPrivacy);
-		
+
 		boardname = new JTextField();
 		boardname.setFont(new Font("Tahoma", Font.BOLD, 20));
-		boardname.setBounds(477, 171, 239, 34);
+		boardname.setBounds(495, 122, 239, 34);
 		panel.add(boardname);
 		boardname.setColumns(10);
-		
+
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"private", "public", "team"}));
-		comboBox.setBounds(477, 268, 162, 34);
+		comboBox.setBounds(493, 208, 162, 34);
 		panel.add(comboBox);
-		
+
+		/*JComboBox comboBox_1 = new JComboBox();
+					comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"ADMIN", "NORMAL"}));
+					comboBox_1.setBounds(493, 301, 162, 34);
+					panel.add(comboBox_1);
+		 */
 		JButton button = new JButton("CREATE");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -116,16 +123,22 @@ public class CreBoard extends JFrame {
 					board.setPrivacy((String) comboBox.getSelectedItem());
 					board.setPrivilege("ADMIN");
 
-			        try {
-						Controller c1 = new Controller();
-						c1.createBoard(board);
-						}catch (Exception e1) {
-			        	e1.printStackTrace();
-			        }			       
-				    
-			        JOptionPane.showMessageDialog(null, "BOARD CREATED !!!");
-			        Login.board = boardname.getText();
-			        dispose();
+					try {
+
+						boolean result=c1.checkExistingBoardName(usnme, (String) boardname.getText());
+
+						if (!result) {
+
+							c1.createBoard(board);
+						}
+						else {JOptionPane.showMessageDialog(null, "Board name already exists"); return;}
+					}catch (Exception e1) {
+						e1.printStackTrace();
+					}			       
+
+					JOptionPane.showMessageDialog(null, "BOARD CREATED !!!");
+					Login.board = boardname.getText();
+					dispose();
 					TeamBoard tbo = new TeamBoard();
 					tbo.setVisible(true);
 				}			
@@ -136,7 +149,7 @@ public class CreBoard extends JFrame {
 		button.setBackground(Color.WHITE);
 		button.setBounds(345, 422, 176, 48);
 		panel.add(button);
-		
-		
+
+
 	}
 }

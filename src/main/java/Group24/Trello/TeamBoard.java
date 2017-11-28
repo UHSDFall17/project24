@@ -51,19 +51,19 @@ public class TeamBoard extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		String username = Login.uname;
 		String teamname = Login.team;
 		String boardname = Login.board;
-		
+
 		JPanel panel = new JPanel();
 		panel.setForeground(new Color(153, 204, 255));
 		panel.setBounds(-11, 0, 639, 424);
 		panel.setBackground(new Color(60, 179, 113));
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
-		
+
+
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -75,55 +75,55 @@ public class TeamBoard extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
-		
+
 		JLabel lblTeam = new JLabel("TEAM:");
 		lblTeam.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblTeam.setBounds(393, 152, 65, 20);
 		panel.add(lblTeam);
-		
+
 		JLabel lblBoard = new JLabel("BOARD:");
 		lblBoard.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblBoard.setBounds(382, 243, 65, 20);
 		panel.add(lblBoard);
-		
+
 		JComboBox teamBox = new JComboBox();
 		teamBox.setBounds(474, 146, 205, 35);
 		panel.add(teamBox);
-		
+
 		JComboBox boardBox = new JComboBox();
 		boardBox.setBounds(474, 241, 205, 35);
 		panel.add(boardBox);
-		
+
 		JButton btnAdd = new JButton("ADD ");
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					try {
-						String teamname = null;
-						String boardname = null;
+				try {
+					String teamname = null;
+					String boardname = null;
 
-						Controller c1= new Controller();
+					Controller c1= new Controller();
 
-						boardname=(String) boardBox.getSelectedItem();
-						ResultSet rs=c1.checkTeamHasBoard(boardname);
+					boardname=(String) boardBox.getSelectedItem();
+					ResultSet rs=c1.checkTeamHasBoard(boardname);
 
 
-						if (rs.next()) {
-							JOptionPane.showMessageDialog(null, "Board is already allocated to a Team !!!!!!" );
+					if (rs.next()) {
+						JOptionPane.showMessageDialog(null, "Board is already allocated to a Team !!!!!!" );
 
-							return;
-						}
-
-						teamname=(String) teamBox.getSelectedItem();
-						c1.updateBoardTeam(boardname, teamname);
-
-					}catch(Exception e1) {
-						e1.printStackTrace();
+						return;
 					}
+
+					teamname=(String) teamBox.getSelectedItem();
+					c1.updateBoardTeam(boardname, teamname);
+
+				}catch(Exception e1) {
+					e1.printStackTrace();
+				}
 				JOptionPane.showMessageDialog(null, "ADDED !!!");
 				dispose();
 				Homepage hmp = new Homepage();
 				hmp.setVisible(true);
-				
+
 			}
 		});
 		btnAdd.setForeground(new Color(0, 51, 102));
@@ -131,27 +131,27 @@ public class TeamBoard extends JFrame {
 		btnAdd.setBackground(Color.WHITE);
 		btnAdd.setBounds(323, 433, 174, 48);
 		panel.add(btnAdd);
-		
-			try {
-				Controller c1 = new Controller();
-				ResultSet rs = c1.listMyTeam(username);
-		            while (rs.next()) {
-		            	String tname = rs.getString("team_name");
-		            	teamBox.addItem(tname);
-		            	}
-			}catch(Exception e) {
-	        	e.printStackTrace();
-	        }
-			
-			try {
-				Controller c1 = new Controller();
-				ResultSet rs = c1.checkExistingBoard(username);
-		            while (rs.next()) {
-		            	String bname = rs.getString("BoardName");
-		            	boardBox.addItem(bname);
-		            	}
-			}catch(Exception e) {
-	        	e.printStackTrace();
-	        }
+
+		try {
+			Controller c1 = new Controller();
+			ResultSet rs = c1.listMyTeam(username);
+			while (rs.next()) {
+				String tname = rs.getString("team_name");
+				teamBox.addItem(tname);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
+
+		try {
+			Controller c1 = new Controller();
+			ResultSet rs = c1.checkExistingBoard(username);
+			while (rs.next()) {
+				String bname = rs.getString("BoardName");
+				boardBox.addItem(bname);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

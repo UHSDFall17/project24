@@ -52,7 +52,7 @@ public class AddList extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel.setForeground(new Color(0, 128, 0));
@@ -60,9 +60,9 @@ public class AddList extends JFrame {
 		panel.setBackground(new Color(250, 240, 230));
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
+
 		String bnme=Login.board;
-		
+
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -74,29 +74,29 @@ public class AddList extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
-		
+
 		JLabel lblBoard = new JLabel("BOARD:");
 		lblBoard.setForeground(Color.BLACK);
 		lblBoard.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		lblBoard.setBounds(273, 123, 99, 34);
 		panel.add(lblBoard);
-		
+
 		JLabel label = new JLabel(bnme);
 		label.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label.setBounds(377, 123, 165, 34);
 		panel.add(label);
-		
+
 		JLabel lblListName = new JLabel("LIST NAME:");
 		lblListName.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblListName.setBounds(222, 289, 115, 20);
 		panel.add(lblListName);
-		
+
 		listname = new JTextField();
 		listname.setFont(new Font("Tahoma", Font.BOLD, 20));
 		listname.setColumns(10);
 		listname.setBounds(358, 282, 239, 34);
 		panel.add(listname);
-		
+
 		JButton btnAdd = new JButton("ADD");
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -116,7 +116,7 @@ public class AddList extends JFrame {
 				dispose();
 				ListPage lpa = new ListPage();
 				lpa.setVisible(true);
-				
+
 			}
 		});
 		btnAdd.setForeground(new Color(0, 51, 102));
@@ -124,21 +124,21 @@ public class AddList extends JFrame {
 		btnAdd.setBackground(Color.WHITE);
 		btnAdd.setBounds(324, 432, 176, 48);
 		panel.add(btnAdd);
-		
+
 		JLabel lblTeam = new JLabel("TEAM:");
 		lblTeam.setForeground(Color.BLACK);
 		lblTeam.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		lblTeam.setBounds(285, 67, 99, 34);
 		panel.add(lblTeam);
-		
+
 		String tnm= Login.team;
-		
+
 		JLabel label_1 = new JLabel(tnm);
 		label_1.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label_1.setBounds(377, 63, 165, 34);
 		panel.add(label_1);
-		
 
-		
+
+
 	}
 }

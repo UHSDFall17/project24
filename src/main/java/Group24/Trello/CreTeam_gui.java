@@ -59,7 +59,7 @@ public class CreTeam_gui extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel.setForeground(new Color(0, 128, 0));
@@ -67,36 +67,36 @@ public class CreTeam_gui extends JFrame {
 		panel.setBackground(new Color(60, 179, 113));
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
+
 		String usnme = Login.uname;
-		
+
 		JLabel lblNewTeam = new JLabel("NEW TEAM");
 		lblNewTeam.setForeground(Color.WHITE);
 		lblNewTeam.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 		lblNewTeam.setBounds(357, 32, 180, 34);
 		panel.add(lblNewTeam);
-		
+
 		JLabel lblTeamName = new JLabel("TEAM NAME:");
 		lblTeamName.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblTeamName.setBounds(317, 114, 123, 20);
 		panel.add(lblTeamName);
-		
+
 		JLabel lblTeamDescription = new JLabel("TEAM DESCRIPTION: ");
 		lblTeamDescription.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblTeamDescription.setBounds(255, 175, 191, 20);
 		panel.add(lblTeamDescription);
-		
+
 		JLabel lblTeamVisibility = new JLabel("TEAM VISIBILITY:");
 		lblTeamVisibility.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblTeamVisibility.setBounds(271, 386, 169, 20);
 		panel.add(lblTeamVisibility);
-		
+
 		teamname = new JTextField();
 		teamname.setFont(new Font("Tahoma", Font.BOLD, 20));
 		teamname.setBounds(455, 114, 239, 34);
 		panel.add(teamname);
 		teamname.setColumns(10);
-		
+
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -108,18 +108,18 @@ public class CreTeam_gui extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
-		
-		
+
+
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"PUBLIC", "TEAM"}));
 		comboBox.setBounds(456, 384, 162, 26);
 		panel.add(comboBox);
-		
+
 		JTextArea teamdescri = new JTextArea();
 		teamdescri.setFont(new Font("Monospaced", Font.BOLD, 20));
 		teamdescri.setBounds(455, 169, 387, 162);
 		panel.add(teamdescri);
-		
+
 		JButton btnCreate = new JButton("CREATE");
 		btnCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -135,38 +135,38 @@ public class CreTeam_gui extends JFrame {
 						Controller c1 = new Controller();
 						ResultSet rs = c1.displayTeamcreds(teamname1);
 						if (rs.next()) {
-			            	JOptionPane.showMessageDialog(null, "Team name already exist" );
-		                	return;
-			            }
-			            c1.createTeam(team1,Login.uname);
-			        	 JOptionPane.showMessageDialog(null, "TEAM CREATED !!!");
-			        	 Login.team = teamname.getText();
-					        dispose();
-							AddTeamMem atm = new AddTeamMem();
-							atm.setVisible(true);
-			        	
-			        }catch (Exception e1) {
-			        	e1.printStackTrace();
-			        }			       
-				    
-			       
+							JOptionPane.showMessageDialog(null, "Team name already exist" );
+							return;
+						}
+						c1.createTeam(team1,Login.uname);
+						JOptionPane.showMessageDialog(null, "TEAM CREATED !!!");
+						Login.team = teamname.getText();
+						dispose();
+						AddTeamMem atm = new AddTeamMem();
+						atm.setVisible(true);
+
+					}catch (Exception e1) {
+						e1.printStackTrace();
+					}			       
+
+
 				}
-				
-				
+
+
 			}
 		}
-			
-	);
-				
-			
+
+				);
+
+
 		btnCreate.setForeground(new Color(0, 51, 102));
 		btnCreate.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 		btnCreate.setBackground(Color.WHITE);
 		btnCreate.setBounds(427, 467, 176, 48);
 		panel.add(btnCreate);
-		
 
-	
-		
+
+
+
 	}
 }
