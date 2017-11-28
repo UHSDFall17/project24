@@ -21,7 +21,6 @@
     <version>4.12</version>
     <scope>test</scope>
 </dependency>
-<<<<<<< HEAD
 
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
@@ -29,9 +28,18 @@
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.8-dmr</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt -->
+<dependency>
+  	<groupId>org.eclipse.platform</groupId>
+    <artifactId>org.eclipse.swt</artifactId>
+     <version>3.106.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/net.java.dev.swing-layout/swing-layout -->
+<dependency>
+     <groupId>net.java.dev.swing-layout</groupId>
+     <artifactId>swing-layout</artifactId>
+     <version>1.0.2</version>
+</dependency>
 
-
-=======
->>>>>>> 369f7455a449aca07382db2ca367be872e0d476f
   </dependencies>
 </project>

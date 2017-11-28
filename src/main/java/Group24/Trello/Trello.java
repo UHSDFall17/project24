@@ -6,13 +6,11 @@ package Group24.Trello;
  * and open the template in the editor.
  */
 import java.sql.Connection;
-<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.sql.Statement;
-=======
->>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -25,10 +23,10 @@ public class Trello {
 
     /**
      * @param args the command line arguments
+     * @throws SQLException 
      */
-<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
 	
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
         String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
         String dbName = "trello1";//databese name
         String driver = "com.mysql.cj.jdbc.Driver";
@@ -39,20 +37,18 @@ public class Trello {
         	Class.forName(driver).newInstance();
         	Connection conn = DriverManager.getConnection(url,userName,password);
         	Statement st = conn.createStatement();
-        	ResultSet res = st.executeQuery("select * from  usercreds;");
-        	while (res.next()) 
+        /*	ResultSet res = st.executeQuery("select * from  usercreds;");
+        	while (res.next()) { 
         		System.out.println(res.getInt(1)+"  "+res.getString(2)+"  "+res.getString(3));  
         	System.out.println(res.getString("fname"));
         	ResultSetMetaData rsmd = res.getMetaData();
         	int columnsNumber = rsmd.getColumnCount();
+        	}*/
         	conn.close();
         }catch (Exception e) {
         	e.printStackTrace();
         }
        
-=======
-    public static void main(String[] args) throws IOException {
->>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
         FileWriter writer = new FileWriter("output.txt"); 
         PrintWriter printer = new PrintWriter("output.txt");
         Scanner in = new Scanner(System.in);
@@ -102,23 +98,22 @@ public class Trello {
          for(String str: task_US) 
          {
         	 printer.println(str);
-<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
          }         
-=======
-         }
-         
->>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
          printer.println();
+     	Connection conn = DriverManager.getConnection(url,userName,password);
+         Statement statement = conn.createStatement();
+         statement.executeUpdate("INSERT INTO usercreds " + "VALUES ('" +u.getUsername()+"', '"+u.getPwd()+"');");
+         statement.executeUpdate("INSERT INTO userdetails " + "VALUES ('" +u.getFname()+"', '"+u.getLname()+"','"+u.getCompany()+"','"+u.getEmailID()+"','"+u.getPhnum()+"','"+u.getUsername()+"');");
          
 //-----------------------------------------------------------------------------
 
          ArrayList<String> task_B = new ArrayList();
          System.out.println("Enter your choice:");
+         Board board=new Board();
          choice:
          {
         	 System.out.println("1. Create a Board");
         	 System.out.println("2. Existing Boards");
-        	 Board board=new Board();
         	 int key = board.enterInt();
         	 
         	 if(key == 1) 
@@ -130,20 +125,11 @@ public class Trello {
                      }
             	 }
         	 } 
-<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
-=======
-
->>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
         	 else
         	 {
         		 System.out.println("Enter a valid option!! :");
         		 break choice;
-<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
         	 }       	 
-=======
-        	 }
-        	 
->>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
         	 task_B.add("Board Name: " + board.getBoardName());
         	 task_B.add("Privacy: " + board.getPrivacy());
         	 for(String str: task_B) 
@@ -153,6 +139,7 @@ public class Trello {
          }
          
          printer.println();
+         statement.executeUpdate("INSERT INTO board " + "VALUES ('" +board.getBoardName()+"', '1234567890','"+board.getPrivacy()+"','"+u.getUsername()+"');");
 
 //---------------------------------------------------------------------      
                  
