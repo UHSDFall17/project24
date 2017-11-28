@@ -6,10 +6,13 @@ package Group24.Trello;
  * and open the template in the editor.
  */
 import java.sql.Connection;
+<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
+=======
+>>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -23,6 +26,7 @@ public class Trello {
     /**
      * @param args the command line arguments
      */
+<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
 	
     public static void main(String[] args) throws IOException {
         String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
@@ -46,6 +50,9 @@ public class Trello {
         	e.printStackTrace();
         }
        
+=======
+    public static void main(String[] args) throws IOException {
+>>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
         FileWriter writer = new FileWriter("output.txt"); 
         PrintWriter printer = new PrintWriter("output.txt");
         Scanner in = new Scanner(System.in);
@@ -95,7 +102,12 @@ public class Trello {
          for(String str: task_US) 
          {
         	 printer.println(str);
+<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
          }         
+=======
+         }
+         
+>>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
          printer.println();
          
 //-----------------------------------------------------------------------------
@@ -118,11 +130,20 @@ public class Trello {
                      }
             	 }
         	 } 
+<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
+=======
+
+>>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
         	 else
         	 {
         		 System.out.println("Enter a valid option!! :");
         		 break choice;
+<<<<<<< HEAD:src/main/java/Group24/Trello/Trello.java
         	 }       	 
+=======
+        	 }
+        	 
+>>>>>>> 369f7455a449aca07382db2ca367be872e0d476f:src/main/java/Group24/Trello/Trello.java
         	 task_B.add("Board Name: " + board.getBoardName());
         	 task_B.add("Privacy: " + board.getPrivacy());
         	 for(String str: task_B) 
