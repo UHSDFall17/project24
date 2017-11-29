@@ -7,7 +7,7 @@ public class User {
 
 private String username;
 private String fname, lname;
-private char pwd[]; 
+private String pwd;
 private String company;
 private String emailID;
 private long phnum;
@@ -37,10 +37,10 @@ public String getLname() {
 public void setLname(String lname) {
 	this.lname = lname;
 }
-public char[] getPwd() {
+public String getPwd() {
 	return pwd;
 }
-public void setPwd(char[] pwd) {
+public void setPwd(String pwd) {
 	this.pwd = pwd;
 }
 public String getCompany() {
