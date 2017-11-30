@@ -4,8 +4,11 @@ import java.sql.*;
 import java.util.List;
 import javax.swing.JOptionPane;
 
+<<<<<<< HEAD
 import Group24.Trello.Homepage;
 import Group24.Trello.MysqlCon;
+=======
+>>>>>>> Nikhita
 import Group24.Trello.*;
 import com.mysql.cj.api.mysqla.result.Resultset;
 
@@ -84,6 +87,11 @@ public class Controller {
 			pstmt1.setString(2, pwd);
 			pstmt1.setString(1, username);
 			result1=pstmt1.executeUpdate();
+<<<<<<< HEAD
+=======
+
+			
+>>>>>>> Nikhita
 			conn.close();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -235,6 +243,29 @@ public class Controller {
 		return rs;
 	}
 
+<<<<<<< HEAD
+=======
+	public ResultSet displayTeamforBoard(String bname) {
+		ResultSet rs = null;
+		try {
+
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+			Statement st = conn.createStatement();
+			String sql1;
+
+
+			sql1 = "SELECT team_name from team where team_id in (select team_id from board_team where board_id in (select BoardID from board where BoardName='"+bname+"'));";
+			rs = st.executeQuery(sql1); //where ps is Object of PreparedStatement
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
+>>>>>>> Nikhita
 	public ResultSet creatingList(String bname, String list_name) {
 		ResultSet rs=null;
 		try {
@@ -587,6 +618,61 @@ public class Controller {
 		return result1;
 	}
 
+<<<<<<< HEAD
+=======
+
+	public void logout() {
+		try {
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+
+			conn.close();
+
+		}catch(Exception e1) {
+			e1.printStackTrace();
+		}
+	}
+	
+	public int addCard(String lname,String tname,String mem_username,String duedate1,String cardname1) {
+		int i=-1;
+		try {
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+			Statement st = conn.createStatement();
+					  
+			String qu = "select list_id from list where list_name = '"+lname+"';";
+			ResultSet res = st.executeQuery(qu);		
+			String lid = null;
+			String mid = null;
+			String tid = null;
+			while (res.next()) {
+				lid = res.getString("list_id");			            	
+			}
+			Statement st3 = conn.createStatement();
+			String qu3 = "select team_id from team where team_name = '"+tname+"';";
+			ResultSet res3 = st3.executeQuery(qu3);
+			while (res3.next()) {
+				tid = res3.getString("team_id");
+			}
+			Statement st2 = conn.createStatement();
+			String qu2 = "select member_id from member where mem_username = '"+mem_username+"' and team_id = '"+tid+"';";
+			ResultSet res2 = st2.executeQuery(qu2);
+			while (res2.next()) {
+				mid = res2.getString("member_id");
+			}
+			
+					
+			i=st.executeUpdate("INSERT INTO card " + "VALUES ('"+lid+"','0','"+duedate1+"','"+mid+"','"+cardname1+"') ;");
+			
+		}catch(Exception e1) {
+			e1.printStackTrace();
+		}return i;
+	}
+	
+
+>>>>>>> Nikhita
 }
 
 

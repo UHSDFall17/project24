@@ -27,6 +27,11 @@ public class CreBoard extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField boardname;
+<<<<<<< HEAD
+=======
+	Controller c1=new Controller();
+
+>>>>>>> Nikhita
 
 	/**
 	 * Launch the application.
@@ -54,7 +59,11 @@ public class CreBoard extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JPanel panel = new JPanel();
 		panel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel.setForeground(new Color(0, 128, 0));
@@ -62,9 +71,15 @@ public class CreBoard extends JFrame {
 		panel.setBackground(new Color(60, 179, 113));
 		contentPane.add(panel);
 		panel.setLayout(null);
+<<<<<<< HEAD
 		
 		String usnme = Login.uname;
 		
+=======
+
+		String usnme = Login.uname;
+
+>>>>>>> Nikhita
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -76,45 +91,75 @@ public class CreBoard extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JLabel lblNewBoard = new JLabel("NEW BOARD");
 		lblNewBoard.setForeground(Color.WHITE);
 		lblNewBoard.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 		lblNewBoard.setBounds(357, 32, 180, 34);
 		panel.add(lblNewBoard);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JLabel lbBoardName = new JLabel("BOARD NAME:");
 		lbBoardName.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lbBoardName.setBounds(345, 129, 123, 20);
 		panel.add(lbBoardName);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JLabel lblPrivacy = new JLabel("PRIVACY:");
 		lblPrivacy.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblPrivacy.setBounds(390, 214, 78, 20);
 		panel.add(lblPrivacy);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		boardname = new JTextField();
 		boardname.setFont(new Font("Tahoma", Font.BOLD, 20));
 		boardname.setBounds(495, 122, 239, 34);
 		panel.add(boardname);
 		boardname.setColumns(10);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"private", "public", "team"}));
 		comboBox.setBounds(493, 208, 162, 34);
 		panel.add(comboBox);
+<<<<<<< HEAD
 		
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"ADMIN", "NORMAL"}));
 		comboBox_1.setBounds(493, 301, 162, 34);
 		panel.add(comboBox_1);
 		
+=======
+
+		/*JComboBox comboBox_1 = new JComboBox();
+					comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"ADMIN", "NORMAL"}));
+					comboBox_1.setBounds(493, 301, 162, 34);
+					panel.add(comboBox_1);
+		 */
+>>>>>>> Nikhita
 		JButton button = new JButton("CREATE");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (boardname.getText().isEmpty())
 					JOptionPane.showMessageDialog(null, "All fields are required !"); 							
 				else{
+<<<<<<< HEAD
 
 					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
 			        String dbName = "trello1";//databese name
@@ -136,6 +181,30 @@ public class CreBoard extends JFrame {
 			        JOptionPane.showMessageDialog(null, "BOARD CREATED !!!");
 			        Login.board = boardname.getText();
 			        dispose();
+=======
+					Board board=new Board();
+					board.setUsername(usnme);
+					board.setBoardName(boardname.getText());
+					board.setPrivacy((String) comboBox.getSelectedItem());
+					board.setPrivilege("ADMIN");
+
+					try {
+
+						boolean result=c1.checkExistingBoardName(usnme, (String) boardname.getText());
+
+						if (!result) {
+
+							c1.createBoard(board);
+						}
+						else {JOptionPane.showMessageDialog(null, "Board name already exists"); return;}
+					}catch (Exception e1) {
+						e1.printStackTrace();
+					}			       
+
+					JOptionPane.showMessageDialog(null, "BOARD CREATED !!!");
+					Login.board = boardname.getText();
+					dispose();
+>>>>>>> Nikhita
 					TeamBoard tbo = new TeamBoard();
 					tbo.setVisible(true);
 				}			
@@ -146,6 +215,7 @@ public class CreBoard extends JFrame {
 		button.setBackground(Color.WHITE);
 		button.setBounds(345, 422, 176, 48);
 		panel.add(button);
+<<<<<<< HEAD
 		
 		JLabel lblPrivilege = new JLabel("PRIVILEGE:");
 		lblPrivilege.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
@@ -156,3 +226,9 @@ public class CreBoard extends JFrame {
 		
 	}
 }
+=======
+
+
+	}
+}
+>>>>>>> Nikhita

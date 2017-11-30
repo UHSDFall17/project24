@@ -83,7 +83,10 @@ public class Cardui extends JFrame {
 		comboBox.setBounds(380, 231, 331, 32);
 		panel.add(comboBox);
 		try {
+<<<<<<< HEAD
 			
+=======
+>>>>>>> Nikhita
 			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
 	        String dbName = "trello1";//databese name
 	        String driver = "com.mysql.cj.jdbc.Driver";

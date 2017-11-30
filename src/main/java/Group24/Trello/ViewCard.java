@@ -12,6 +12,10 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.JTextPane;
+<<<<<<< HEAD
+=======
+import javax.swing.SwingUtilities;
+>>>>>>> Nikhita
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -254,11 +258,23 @@ public class ViewCard extends JFrame {
 	    			            	while (res3.next()) {
 	    			            		mid = res3.getString("member_id");
 	    			            	}			          
+<<<<<<< HEAD
 	    			            	st1.execute("INSERT INTO comments " + "VALUES ('0','"+cid+"','"+mid+"','"+addcom.getText()+"') ;");
 	    				}catch(Exception e1) {
 	    		        	e1.printStackTrace();
 	    		        }
 	    				JOptionPane.showMessageDialog(null, "Comment added !!!");
+=======
+	    			            	st1.execute("INSERT INTO comments " + "VALUES ('0','"+cid+"','"+mid+"','"+addcom.getText()+"') ;");	    			            	
+	    			            	setVisible(false);
+	    			            	ViewCard vcd = new ViewCard();
+	    			            	vcd.setVisible(true);
+	    			            	JOptionPane.showMessageDialog(null, "Comment added !!!");
+	    				}catch(Exception e1) {
+	    		        	e1.printStackTrace();
+	    		        }
+	    			
+>>>>>>> Nikhita
 	    				}
 	    				
 	    			

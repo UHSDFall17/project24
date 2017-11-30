@@ -28,6 +28,7 @@
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.8-dmr</version>
 </dependency>
+<<<<<<< HEAD
 <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt -->
 <dependency>
   	<groupId>org.eclipse.platform</groupId>
@@ -39,6 +40,14 @@
      <groupId>net.java.dev.swing-layout</groupId>
      <artifactId>swing-layout</artifactId>
      <version>1.0.2</version>
+=======
+
+<!-- https://mvnrepository.com/artifact/com.google.cloud.sql/mysql-socket-factory -->
+<dependency>
+    <groupId>com.google.cloud.sql</groupId>
+    <artifactId>mysql-socket-factory</artifactId>
+    <version>1.0.4</version>
+>>>>>>> Nikhita
 </dependency>
 
   </dependencies>

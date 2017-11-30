@@ -54,7 +54,11 @@ public class AddTeamMem extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JPanel panel = new JPanel();
 		panel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel.setForeground(new Color(0, 128, 0));
@@ -62,19 +66,30 @@ public class AddTeamMem extends JFrame {
 		panel.setBackground(new Color(60, 179, 113));
 		contentPane.add(panel);
 		panel.setLayout(null);
+<<<<<<< HEAD
 		
 		String username = Login.uname;
 		
+=======
+
+		String username = Login.uname;
+
+>>>>>>> Nikhita
 		JLabel lblAddTeamMembers = new JLabel("ADD TEAM MEMBERS");
 		lblAddTeamMembers.setForeground(Color.WHITE);
 		lblAddTeamMembers.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 		lblAddTeamMembers.setBounds(360, 16, 287, 34);
 		panel.add(lblAddTeamMembers);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JLabel lblSelectTeam = new JLabel("SELECT TEAM:");
 		lblSelectTeam.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblSelectTeam.setBounds(386, 123, 123, 20);
 		panel.add(lblSelectTeam);
+<<<<<<< HEAD
 		
 		JComboBox TeamBox = new JComboBox();
 		TeamBox.setBounds(570, 117, 263, 35);
@@ -101,10 +116,29 @@ public class AddTeamMem extends JFrame {
         	e.printStackTrace();
         }
 		
+=======
+
+		JComboBox TeamBox = new JComboBox();
+		TeamBox.setBounds(570, 117, 263, 35);
+		panel.add(TeamBox);
+
+		try {
+			Controller c1 = new Controller();
+			ResultSet rs = c1.listMyTeam(username);
+			while (rs.next()) {
+				String tname = rs.getString("team_name");
+				TeamBox.addItem(tname);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+>>>>>>> Nikhita
 		JLabel lblSelectTeamMembers = new JLabel("SELECT TEAM MEMBERS:");
 		lblSelectTeamMembers.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblSelectTeamMembers.setBounds(301, 233, 208, 20);
 		panel.add(lblSelectTeamMembers);
+<<<<<<< HEAD
 		
 		JComboBox MemberBox = new JComboBox();
 		MemberBox.setBounds(570, 227, 263, 35);
@@ -131,20 +165,48 @@ public class AddTeamMem extends JFrame {
         	e.printStackTrace();
         }
 		
+=======
+
+		JComboBox MemberBox = new JComboBox();
+		MemberBox.setBounds(570, 227, 263, 35);
+		panel.add(MemberBox);
+
+		try {
+			Controller c1 = new Controller();
+			ResultSet rs = c1.listAllUsers();
+			while (rs.next()) {
+				String membername = rs.getString("username");
+				MemberBox.addItem(membername);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+
+>>>>>>> Nikhita
 		JLabel lblPrivilege = new JLabel("PRIVILEGE:");
 		lblPrivilege.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblPrivilege.setBounds(404, 370, 105, 20);
 		panel.add(lblPrivilege);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JComboBox priBox = new JComboBox();
 		priBox.setModel(new DefaultComboBoxModel(new String[] {"NORMAL", "ADMIN"}));
 		priBox.setBounds(570, 364, 263, 35);
 		panel.add(priBox);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JButton btnAddMember = new JButton("ADD MEMBER");
 		btnAddMember.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
+<<<<<<< HEAD
 					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
 			        String dbName = "trello1";//databese name
 			        String driver = "com.mysql.cj.jdbc.Driver";
@@ -169,6 +231,25 @@ public class AddTeamMem extends JFrame {
 		        }
 				
 				
+=======
+
+					String teamname=(String) TeamBox.getSelectedItem();
+					String privilege=(String) priBox.getSelectedItem();
+					String mem_username=(String) MemberBox.getSelectedItem();
+
+					Controller c1 = new Controller();
+					c1.addMemberToTeam(teamname, privilege, mem_username);
+					
+				}catch(Exception e1) {
+					e1.printStackTrace();
+				}
+
+
+
+
+				JOptionPane.showMessageDialog(null, "MEMBER ADDED !!!");
+
+>>>>>>> Nikhita
 			}
 		});
 		btnAddMember.setForeground(new Color(0, 51, 102));
@@ -176,7 +257,11 @@ public class AddTeamMem extends JFrame {
 		btnAddMember.setBackground(Color.WHITE);
 		btnAddMember.setBounds(350, 465, 208, 48);
 		panel.add(btnAddMember);
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Nikhita
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -188,6 +273,7 @@ public class AddTeamMem extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
+<<<<<<< HEAD
 		
 
 		
@@ -195,3 +281,12 @@ public class AddTeamMem extends JFrame {
 
 	}
 }
+=======
+
+
+
+
+
+	}
+}
+>>>>>>> Nikhita
