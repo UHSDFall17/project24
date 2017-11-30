@@ -136,7 +136,7 @@ public class Profile extends JFrame {
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					long num = Integer.parseInt(pnumber.getText());					
+					long num = Long.parseLong(pnumber.getText());					
 					if (!(num>999999999 && num<10000000000L)) {
 					JOptionPane.showMessageDialog(null, "Invalid phone number" );
 						}
