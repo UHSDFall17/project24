@@ -151,7 +151,7 @@ public class signup extends JFrame {
 				if (username.getText().isEmpty()||pwd.getText().isEmpty()||firstname.getText().isEmpty()||lastname.getText().isEmpty()||companyname.getText().isEmpty()||emailid.getText().isEmpty()||phnumber.getText().isEmpty())
 					JOptionPane.showMessageDialog(null, "All fields are required !"); 							
 				else try {
-					long num = Integer.parseInt(phnumber.getText());					
+					long num = Long.parseLong(pnumber.getText());				
 					if (!(num>999999999 && num<10000000000L)) {
 					JOptionPane.showMessageDialog(null, "Invalid phone number" );
 				}
@@ -166,7 +166,7 @@ public class signup extends JFrame {
 			        String userName = "root";
 			        String Password = "trello";// password
 			        
-			        try {
+			        
 			        	Class.forName(driver).newInstance();
 			        	Connection conn = DriverManager.getConnection(url,userName,Password);
 			            Statement statement = conn.createStatement();
@@ -184,10 +184,7 @@ public class signup extends JFrame {
 			            JOptionPane.showMessageDialog(null, "WELCOME !!!");
 			            Login.uname = username.getText();
 			        	conn.close();
-			        }catch (Exception e) {
-			        	e.printStackTrace();
-			        }
-			        
+			       
 			        
 			        setVisible(false);
 	            	Homepage hmp = new Homepage();
