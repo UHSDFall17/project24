@@ -5,16 +5,6 @@
  */
 package Group24.Trello;
 
-<<<<<<< HEAD
-import java.sql.ResultSet;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-=======
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -33,7 +23,6 @@ import Group24.Trello.*;
 import com.mysql.cj.api.mysqla.result.Resultset;
 import java.util.ArrayList;
 
->>>>>>> Nikhita
 /**
  *
  * @author Gc PC
@@ -80,29 +69,18 @@ public class ControllerTest {
     /**
      * Test of SaveUserDetails method, of class Controller.
      */
-<<<<<<< HEAD
-=======
     //everytime to test this function, the Username needs to be changed
->>>>>>> Nikhita
     @Test
     public void testSaveUserDetails() {
         System.out.println("SaveUserDetails");
         User user = new User();
-<<<<<<< HEAD
-        user.setUsername("jka");
-=======
         user.setUsername("jkab12");
->>>>>>> Nikhita
         user.setFname("cui");   
         user.setLname("v");
         user.setPwd("12345678");
         user.setCompany("aaa");
         user.setEmailID("garry@123.com");
-<<<<<<< HEAD
-        user.setPhnum(1234567890);
-=======
         user.setPhnum(Long.valueOf(1234567890));
->>>>>>> Nikhita
         
         Controller instance = new Controller();
         int expResult = 1;
@@ -115,19 +93,12 @@ public class ControllerTest {
     /**
      * Test of SaveUserCreds method, of class Controller.
      */
-<<<<<<< HEAD
-=======
     //Need to change the setUsername every time run the test 
->>>>>>> Nikhita
     @Test
     public void testSaveUserCreds() {
         System.out.println("SaveUserCreds");
         User user = new User();
-<<<<<<< HEAD
-        user.setUsername("jkb");
-=======
         user.setUsername("naveen123");
->>>>>>> Nikhita
         user.setPwd("12345678");
         Controller instance = new Controller();
         int expResult = 1;
@@ -158,15 +129,6 @@ public class ControllerTest {
     @Test
     public void testCheckExistingTeam() {
         System.out.println("checkExistingTeam");
-<<<<<<< HEAD
-        String username = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.checkExistingTeam(username);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
         String username = "jka";
         ResultSet expResult = null;
         Controller instance = new Controller();
@@ -190,24 +152,12 @@ public class ControllerTest {
         ResultSet result = instance.checkExistingTeam(username);
         assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
->>>>>>> Nikhita
     }
 
     /**
      * Test of checkExistingBoard method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testCheckExistingBoard() {
-        System.out.println("checkExistingBoard");
-        String username = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.checkExistingBoard(username);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testCheckExistingBoard() throws SQLException {
         System.out.println("checkExistingBoard");
         String username = "jka";
@@ -224,31 +174,19 @@ public class ControllerTest {
             bname[i] = result.getString("BoardName");
             i++;
         }
-        String[] b = {"jka","nav","board1234"};
+        String[] b = {"Board"};
         Assert.assertArrayEquals(b, bname);
         // TODO review the generated test code and remove the default call to fail.
 
->>>>>>> Nikhita
     }
 
     /**
      * Test of fetchingBoardDetails method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testFetchingBoardDetails() {
-        System.out.println("fetchingBoardDetails");
-        String BoardName1 = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.fetchingBoardDetails(BoardName1);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testFetchingBoardDetails() throws SQLException {
         System.out.println("fetchingBoardDetails");
-        String BoardName1 = "jka";
+        String BoardName1 = "Board";
         Controller instance = new Controller();
         ResultSet result = instance.fetchingBoardDetails(BoardName1);
         int i=0,l=0;
@@ -261,29 +199,17 @@ public class ControllerTest {
             tname[i] = result.getString("team_name");
             i++;
         }
-        String[] t = {"team1"};
+        String[] t = {"Team"};
         Assert.assertArrayEquals(t, tname);
->>>>>>> Nikhita
     }
 
     /**
      * Test of displayingBoardsForTeam method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testDisplayingBoardsForTeam() {
-        System.out.println("displayingBoardsForTeam");
-        String teamname1 = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.displayingBoardsForTeam(teamname1);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testDisplayingBoardsForTeam() throws SQLException {
         System.out.println("displayingBoardsForTeam");
-        String teamname1 = "team1";
+        String teamname1 = "Team";
         Controller instance = new Controller();
         ResultSet result = instance.displayingBoardsForTeam(teamname1);
         int i=0,l=0;
@@ -296,29 +222,17 @@ public class ControllerTest {
             bname[i] = result.getString("BoardName");
             i++;
         }
-        String[] b = {"jka"};
+        String[] b = {"Board"};
         Assert.assertArrayEquals(b, bname);
->>>>>>> Nikhita
     }
 
     /**
      * Test of displayingTeamMembers method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testDisplayingTeamMembers() {
-        System.out.println("displayingTeamMembers");
-        String teamname = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.displayingTeamMembers(teamname);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testDisplayingTeamMembers() throws SQLException {
         System.out.println("displayingTeamMembers");
-        String teamname1 = "team1";
+        String teamname1 = "Team";
         Controller instance = new Controller();
         ResultSet result = instance.displayingTeamMembers(teamname1);
         int i=0,l=0;
@@ -331,29 +245,17 @@ public class ControllerTest {
             bname[i] = result.getString("mem_username");
             i++;
         }
-        String[] b = {"jka","nik123","jka123","qwerty"};
+        String[] b = {"jka"};
         Assert.assertArrayEquals(b, bname);
->>>>>>> Nikhita
     }
 
     /**
      * Test of displayListsInBoard method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testDisplayListsInBoard() {
-        System.out.println("displayListsInBoard");
-        String bname = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.displayListsInBoard(bname);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testDisplayListsInBoard() throws SQLException {
         System.out.println("displayListsInBoard");
-        String bname = "jka";
+        String bname = "Board";
         Controller instance = new Controller();
         ResultSet result = instance.displayListsInBoard(bname);
         int i=0,l=0;
@@ -366,9 +268,8 @@ public class ControllerTest {
             lname[i] = result.getString("list_name");
             i++;
         }
-        String[] l1 = {"list1","list2"};
+        String[] l1 = {"list"};
         Assert.assertArrayEquals(l1, lname);
->>>>>>> Nikhita
     }
 
     /**
@@ -380,16 +281,8 @@ public class ControllerTest {
         String bname = "";
         String list_name = "";
         Controller instance = new Controller();
-<<<<<<< HEAD
-        ResultSet expResult = null;
-        ResultSet result = instance.creatingList(bname, list_name);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
         ResultSet result = instance.creatingList(bname, list_name);
 
->>>>>>> Nikhita
     }
 
     /**
@@ -398,13 +291,6 @@ public class ControllerTest {
     @Test
     public void testCreateBoard() {
         System.out.println("createBoard");
-<<<<<<< HEAD
-        Board board = null;
-        Controller instance = new Controller();
-        instance.createBoard(board);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
         String usernameexp = "jka";
         ResultSet rs = null; 
         String rss = null;
@@ -434,24 +320,12 @@ public class ControllerTest {
         }
         // TODO review the generated test code and remove the default call to fail.
         Assert.assertEquals(usernameexp, rss);
->>>>>>> Nikhita
     }
 
     /**
      * Test of listMyTeam method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testListMyTeam() {
-        System.out.println("listMyTeam");
-        String username = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.listMyTeam(username);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testListMyTeam() throws SQLException {
         System.out.println("listMyTeam");
         String username = "jka";
@@ -467,64 +341,47 @@ public class ControllerTest {
             tname[i] = result.getString("team_name");
             i++;
         }
-        String[] t1 = {"team1","team2"};
+        String[] t1 = {"Team","abc"};
         Assert.assertArrayEquals(t1, tname);
->>>>>>> Nikhita
     }
 
     /**
      * Test of displayTeamcreds method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testDisplayTeamcreds() {
-        System.out.println("displayTeamcreds");
-        String teamname1 = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.displayTeamcreds(teamname1);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-=======
     public void testDisplayTeamcreds() throws SQLException {
         System.out.println("displayTeamcreds");
-        String teamname1 = "team1";
+        String teamname1 = "Team";
         Controller instance = new Controller();
         ResultSet result = instance.displayTeamcreds(teamname1);
         int i=0,l=0;
         if (result.last()) {
-            l = result.getRow();
+            l = (result.getRow())*4;
             result.beforeFirst(); // not rs.first() because the rs.next() below will move on, missing the first element
         }
         String[] tname=new String[l];
         while (result.next()) {
             tname[i] = result.getString("team_name");
             i++;
+            tname[i] = result.getString("team_id");
+            i++;
+            tname[i] = result.getString("team_description");
+            i++;
+            tname[i] = result.getString("team_visibility");
+            i++;
         }
 
-        String[] t1 = {"team1"};
+        String[] t1 = {"Team","83","Team under Nikitha","PUBLIC"};
         Assert.assertArrayEquals(t1, tname);
     }
 
 
->>>>>>> Nikhita
     /**
      * Test of createTeam method, of class Controller.
      */
     @Test
     public void testCreateTeam() {
         System.out.println("createTeam");
-<<<<<<< HEAD
-        Team_cre team1 = null;
-        String username = "";
-        Controller instance = new Controller();
-        instance.createTeam(team1, username);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
         ResultSet rs2 = null; 
         String teamnameexp = "abc";
         String username = "jka";
@@ -571,24 +428,12 @@ public class ControllerTest {
         
         // TODO review the generated test code and remove the default call to fail.
 
->>>>>>> Nikhita
     }
 
     /**
      * Test of checkTeamHasBoard method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testCheckTeamHasBoard() {
-        System.out.println("checkTeamHasBoard");
-        String boardname = "";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.checkTeamHasBoard(boardname);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testCheckTeamHasBoard() throws SQLException {
         System.out.println("checkTeamHasBoard");
         String boardname = "nmnmnmnmnmmnn";
@@ -600,7 +445,6 @@ public class ControllerTest {
         else{
             assert(true);
         }
->>>>>>> Nikhita
     }
 
     /**
@@ -609,14 +453,6 @@ public class ControllerTest {
     @Test
     public void testUpdateBoardTeam() {
         System.out.println("updateBoardTeam");
-<<<<<<< HEAD
-        String boardname = "";
-        String teamname = "";
-        Controller instance = new Controller();
-        instance.updateBoardTeam(boardname, teamname);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
         String boardname = "jka";
         String teamname = "team1";
         ResultSet rs = null; 
@@ -639,23 +475,12 @@ public class ControllerTest {
         Assert.assertNotNull(rs);
         // TODO review the generated test code and remove the default call to fail.
         
->>>>>>> Nikhita
     }
 
     /**
      * Test of listAllUsers method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testListAllUsers() {
-        System.out.println("listAllUsers");
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.listAllUsers();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testListAllUsers() throws SQLException {
         System.out.println("listAllUsers");
         Controller instance = new Controller();
@@ -671,9 +496,8 @@ public class ControllerTest {
             i++;
         }
 
-        String[] u1 = {"jka","jka123","nik123","qwerty"};
+        String[] u1 = {"jka","jkab12","nikki123"};
         Assert.assertArrayEquals(u1, uname);
->>>>>>> Nikhita
     }
 
     /**
@@ -682,15 +506,6 @@ public class ControllerTest {
     @Test
     public void testAddMemberToTeam() {
         System.out.println("addMemberToTeam");
-<<<<<<< HEAD
-        String team_name = "";
-        String privilege = "";
-        String mem_username = "";
-        Controller instance = new Controller();
-        instance.addMemberToTeam(team_name, privilege, mem_username);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
         String team_name = "abc";
         String privilege = "ADMIN";
         String mem_username = "jka";
@@ -720,27 +535,15 @@ public class ControllerTest {
         Assert.assertNotNull(rs);
         // TODO review the generated test code and remove the default call to fail.
         
->>>>>>> Nikhita
     }
 
     /**
      * Test of displayCardDescription method, of class Controller.
      */
     @Test
-<<<<<<< HEAD
-    public void testDisplayCardDescription() {
-        System.out.println("displayCardDescription");
-        String lnme = "list1";
-        Controller instance = new Controller();
-        ResultSet expResult = null;
-        ResultSet result = instance.displayCardDescription(lnme);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-=======
     public void testDisplayCardDescription() throws SQLException {
         System.out.println("displayCardDescription");
-        String lnme = "list1";
+        String lnme = "list";
         Controller instance = new Controller();
         ResultSet result = instance.displayCardDescription(lnme);
         int i=0,l=0;
@@ -753,9 +556,8 @@ public class ControllerTest {
             cardname[i] = result.getString("description");
             i++;
         }
-        String[] d1 = {"card 3","card1"};
+        String[] d1 = {"abc-new","xyz"};
         Assert.assertArrayEquals(d1, cardname);
->>>>>>> Nikhita
     }
     
 }

@@ -1,5 +1,7 @@
 package Group24.Trello;
 
+import com.mysql.cj.api.mysqla.result.Resultset;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -12,10 +14,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.JTextPane;
-<<<<<<< HEAD
-=======
 import javax.swing.SwingUtilities;
->>>>>>> Nikhita
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -34,7 +33,7 @@ import javax.swing.JList;
 public class ViewCard extends JFrame {
 
 	private JPanel contentPane;
-
+	Controller c1= new Controller();
 	/**
 	 * Launch the application.
 	 */
@@ -137,56 +136,11 @@ public class ViewCard extends JFrame {
 		String tname = Login.team;	
 		String lname = Login.list;
 		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
-	            Statement st1 = conn.createStatement();	  
-	            			
-	            	String ddt = null;
-	            	String tid = null;
-	            	String memn = null;
-	            	String cmid = null;
-	            	String comm = null;
-	            	String cid = null;
-	            	Statement st3 = conn.createStatement();
-	            	String qu3 = "select due_date from card where description = '"+cname+"';";
-	            	ResultSet res3 = st3.executeQuery(qu3);
-	            	while (res3.next()) {
-	            		ddt = res3.getString("due_date");
-	            	}
-	            	Statement st2 = conn.createStatement();
-	            	String qu2 = "select team_id from team where team_name = '"+tname+"';";
-	            	ResultSet res2 = st2.executeQuery(qu2);
-	            	while (res2.next()) {
-	            		tid = res2.getString("team_id");
-	            	}
-	            	Statement st5 = conn.createStatement();
-	            	String qu5 = "select car_mem_id from card where description = '"+cname+"';";
-	            	ResultSet res5 = st5.executeQuery(qu5);
-	            	while (res5.next()) {
-	            		cmid = res5.getString("car_mem_id");
-	            	}
-	            	Statement st4 = conn.createStatement();
-	            	String qu4 = "select mem_username from member where team_id = '"+tid+"' and member_id = '"+cmid+"';";
-	            	ResultSet res4 = st4.executeQuery(qu4);
-	            	while (res4.next()) {
-	            		memn = res4.getString("mem_username");
-	            	}
-	            	Statement st7 = conn.createStatement();
-	            	String qu7 = "select card_id from card where description = '"+cname+"';";
-	            	ResultSet res7 = st7.executeQuery(qu7);
-	            	while (res7.next()) {
-	            		cid = res7.getString("card_id");
-	            	}
-	            	Statement st6 = conn.createStatement();
-	            	String qu6 = "select comment from comments where card_id = '"+cid+"';";
-	            	ResultSet res6 = st6.executeQuery(qu6);
+			String ddt=c1.displayCardDueDate(cname);
+			String memn=c1.displayCardMembers(tname,cname);
+			ResultSet res6= c1.displayCardComments(cname);
+			String comm = null;
+
 	            	while (res6.next()) {
 	            		comm = res6.getString("comment");
 	            		listModel.addElement(comm);
@@ -227,45 +181,8 @@ public class ViewCard extends JFrame {
 	    				if (addcom.getText().isEmpty())
 	    					JOptionPane.showMessageDialog(null, "Please enter the Comments !!!");
 	    				else {try {
-	    					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	    			        String dbName = "trello1";//databese name
-	    			        String driver = "com.mysql.cj.jdbc.Driver";
-	    			        String userName = "root";
-	    			        String Password = "trello";// password
-	    			        
-	    			        
-	    			        	Class.forName(driver).newInstance();
-	    			        	Connection conn = DriverManager.getConnection(url,userName,Password);
-	    			            Statement st = conn.createStatement();
-	    			            Statement st1 = conn.createStatement();			  
-	    			            	String qu = "select card_id from card where description = '"+cname+"';";
-	    			            	ResultSet res = st.executeQuery(qu);		
-	    			            	String cid = null;
-	    			            	String mid = null;
-	    			            	String tid = null;
-	    			            	while (res.next()) {
-	    			            		cid = res.getString("card_id");			            	
-	    			            	}
-	    			            	Statement st2 = conn.createStatement();
-	    			            	String qu2 = "select team_id from team where team_name = '"+tname+"';";
-	    			            	ResultSet res2 = st2.executeQuery(qu2);
-	    			            	while (res2.next()) {
-	    			            		tid = res2.getString("team_id");
-	    			            	}
-	    			            	Statement st3 = conn.createStatement();
-	    			            	String qu3 = "select member_id from member where mem_username = '"+uname+"' and team_id = '"+tid+"' ;";
-	    			            	ResultSet res3 = st3.executeQuery(qu3);
-	    			            	while (res3.next()) {
-	    			            		mid = res3.getString("member_id");
-	    			            	}			          
-<<<<<<< HEAD
-	    			            	st1.execute("INSERT INTO comments " + "VALUES ('0','"+cid+"','"+mid+"','"+addcom.getText()+"') ;");
-	    				}catch(Exception e1) {
-	    		        	e1.printStackTrace();
-	    		        }
-	    				JOptionPane.showMessageDialog(null, "Comment added !!!");
-=======
-	    			            	st1.execute("INSERT INTO comments " + "VALUES ('0','"+cid+"','"+mid+"','"+addcom.getText()+"') ;");	    			            	
+	    					String addCmmt=addcom.getText();
+	    					c1.addComments(uname,tname,cname,addCmmt);
 	    			            	setVisible(false);
 	    			            	ViewCard vcd = new ViewCard();
 	    			            	vcd.setVisible(true);
@@ -274,7 +191,6 @@ public class ViewCard extends JFrame {
 	    		        	e1.printStackTrace();
 	    		        }
 	    			
->>>>>>> Nikhita
 	    				}
 	    				
 	    			
@@ -289,57 +205,23 @@ public class ViewCard extends JFrame {
 	            JButton btnModify = new JButton("Modify Description and Due Date");
 	            btnModify.addActionListener(new ActionListener() {
 	            	public void actionPerformed(ActionEvent e) {
+						String memuname=member.getText();
+						String ddt=duedate.getText();
+						String desc=description.getText();
 	    				try {
-	    					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	    			        String dbName = "trello1";//databese name
-	    			        String driver = "com.mysql.cj.jdbc.Driver";
-	    			        String userName = "root";
-	    			        String Password = "trello";// password
-	    			        
-	    			        
-	    			        	Class.forName(driver).newInstance();
-	    			        	Connection conn = DriverManager.getConnection(url,userName,Password);
-	    			            Statement st = conn.createStatement();
-	    			            Statement st1 = conn.createStatement();			  
-	    			            	String qu = "select card_id from card where description = '"+cname+"';";
-	    			            	ResultSet res = st.executeQuery(qu);		
-	    			            	String lid = null;
-	    			            	String mid = null;
-	    			            	String tid = null;
-	    			            	while (res.next()) {
-	    			            		lid = res.getString("card_id");			            	
-	    			            	}
-	    			            	Statement st3 = conn.createStatement();
-	    			            	String qu3 = "select team_id from team where team_name = '"+tname+"';";
-	    			            	ResultSet res3 = st3.executeQuery(qu3);
-	    			            	while (res3.next()) {
-	    			            		tid = res3.getString("team_id");
-	    			            	}
-	    			            	Statement st2 = conn.createStatement();
-	    			            	String qu2 = "select member_id from member where mem_username = '"+member.getText()+"' and team_id = '"+tid+"';";
-	    			            	ResultSet res2 = st2.executeQuery(qu2);
-	    			            	while (res2.next()) {
-	    			            		mid = res2.getString("member_id");
-	    			            	}
-	    			            	st1.executeUpdate("update card set due_date = '"+duedate.getText()+"',description = '"+description.getText()+"' where card_id = '"+lid+"';");
+	    					c1.modifyDueDateDesc(tname,cname,memuname,ddt,desc);
+
 	    				}catch(Exception e1) {
 	    		        	e1.printStackTrace();
 	    		        	JOptionPane.showMessageDialog(null, "Card with the same description is already exist !!!");
 	    		        }
 	    				JOptionPane.showMessageDialog(null, "Card is Modified !!!");
-	    			
-	            		
-	            	}
+					}
 	            });
 	            btnModify.setForeground(new Color(0, 51, 102));
 	            btnModify.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
 	            btnModify.setBackground(Color.WHITE);
 	            btnModify.setBounds(88, 495, 340, 48);
 	            panel.add(btnModify);
-	 
-	            		            
-		
-			
-		
 	}
 }

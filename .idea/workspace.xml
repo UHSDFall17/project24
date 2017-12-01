@@ -12,128 +12,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-<<<<<<< HEAD
-      <file leaf-file-name="AddList.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="115" column="26" lean-forward="true" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-              <folding />
-=======
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="659" column="4" lean-forward="false" selection-start-line="659" selection-start-column="4" selection-end-line="659" selection-end-column="4" />
+            <state relative-caret-position="273">
+              <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1512069597997" expanded="true" signature="508:594" ph=" SELECT statement (USERCREDS)" />
-                <marker date="1512069597997" expanded="true" signature="1229:1325" ph=" INSERT statement (USERDETAILS)" />
-                <marker date="1512069597997" expanded="true" signature="1970:2026" ph=" INSERT statement (USERCREDS)" />
-                <marker date="1512069597997" expanded="true" signature="2548:2617" ph=" SELECT statement (USERCREDS)" />
-                <marker date="1512069597997" expanded="true" signature="3088:3219" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512069597997" expanded="true" signature="3607:3665" ph=" SELECT statement (BOARD)" />
-                <marker date="1512069597997" expanded="true" signature="4057:4215" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="4608:4763" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="5153:5259" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512069597997" expanded="true" signature="5644:5747" ph=" SELECT statement (BOARD, LIST)" />
-                <marker date="1512069597997" expanded="true" signature="6136:6287" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="6688:6744" ph=" SELECT statement (BOARD)" />
-                <marker date="1512069597997" expanded="true" signature="6912:6981" ph=" INSERT statement (LIST)" />
-                <marker date="1512069597997" expanded="true" signature="7456:7546" ph=" INSERT statement (BOARD)" />
-                <marker date="1512069597997" expanded="true" signature="8118:8249" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512069597997" expanded="true" signature="8664:8720" ph=" SELECT statement (TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="9245:9338" ph=" INSERT statement (TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="9579:9641" ph=" SELECT statement (TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="9752:9823" ph=" INSERT statement (MEMBER)" />
-                <marker date="1512069597997" expanded="true" signature="10159:10270" ph=" SELECT statement (BOARD, BOARD_TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="10732:10790" ph=" SELECT statement (BOARD)" />
-                <marker date="1512069597997" expanded="true" signature="10921:10978" ph=" SELECT statement (TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="11145:11210" ph=" INSERT statement (BOARD_TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="11491:11525" ph=" SELECT statement (USERDETAILS)" />
-                <marker date="1512069597997" expanded="true" signature="11885:11947" ph=" SELECT statement (TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="12058:12141" ph=" INSERT statement (MEMBER)" />
-                <marker date="1512069597997" expanded="true" signature="12492:12598" ph=" SELECT statement (LIST, CARD)" />
-                <marker date="1512069597997" expanded="true" signature="12966:13054" ph=" SELECT statement (BOARD)" />
-                <marker date="1512069597997" expanded="true" signature="13633:13722" ph=" SELECT statement (USERDETAILS)" />
-                <marker date="1512069597997" expanded="true" signature="14569:14737" ph=" UPDATE statement (USERDETAILS)" />
-                <marker date="1512069597997" expanded="true" signature="15520:15590" ph=" UPDATE statement (USERCREDS)" />
-                <marker date="1512069597997" expanded="true" signature="16244:16299" ph=" SELECT statement (LIST)" />
-                <marker date="1512069597997" expanded="true" signature="16551:16606" ph=" SELECT statement (TEAM)" />
-                <marker date="1512069597997" expanded="true" signature="16779:16872" ph=" SELECT statement (MEMBER)" />
-                <marker date="1512069597997" expanded="true" signature="17020:17107" ph=" INSERT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="401:491" ph=" SELECT statement (USERCREDS)" />
+                <marker date="1512082590603" expanded="true" signature="1128:1224" ph=" INSERT statement (USERDETAILS)" />
+                <marker date="1512082590603" expanded="true" signature="1874:1930" ph=" INSERT statement (USERCREDS)" />
+                <marker date="1512082590603" expanded="true" signature="2451:2520" ph=" SELECT statement (USERCREDS)" />
+                <marker date="1512082590603" expanded="true" signature="2994:3129" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="3521:3583" ph=" SELECT statement (BOARD)" />
+                <marker date="1512082590603" expanded="true" signature="3979:4141" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="4538:4697" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="5091:5201" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="5590:5697" ph=" SELECT statement (BOARD, LIST)" />
+                <marker date="1512082590603" expanded="true" signature="6086:6241" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="6647:6707" ph=" SELECT statement (BOARD)" />
+                <marker date="1512082590603" expanded="true" signature="6877:6946" ph=" INSERT statement (LIST)" />
+                <marker date="1512082590603" expanded="true" signature="7421:7511" ph=" INSERT statement (BOARD)" />
+                <marker date="1512082590603" expanded="true" signature="8087:8222" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="8642:8699" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="9235:9328" ph=" INSERT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="9570:9633" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="9748:9827" ph=" INSERT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="10172:10287" ph=" SELECT statement (BOARD, BOARD_TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="10759:10821" ph=" SELECT statement (BOARD)" />
+                <marker date="1512082590603" expanded="true" signature="10955:11016" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="11186:11259" ph=" INSERT statement (BOARD_TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="11546:11580" ph=" SELECT statement (USERDETAILS)" />
+                <marker date="1512082590603" expanded="true" signature="11943:12005" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="12115:12207" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="12290:12373" ph=" INSERT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="12745:12855" ph=" SELECT statement (LIST, CARD)" />
+                <marker date="1512082590603" expanded="true" signature="13227:13323" ph=" SELECT statement (BOARD)" />
+                <marker date="1512082590603" expanded="true" signature="13915:14008" ph=" SELECT statement (USERDETAILS)" />
+                <marker date="1512082590603" expanded="true" signature="14857:15049" ph=" UPDATE statement (USERDETAILS)" />
+                <marker date="1512082590603" expanded="true" signature="15832:15910" ph=" UPDATE statement (USERCREDS)" />
+                <marker date="1512082590603" expanded="true" signature="16564:16623" ph=" SELECT statement (LIST)" />
+                <marker date="1512082590603" expanded="true" signature="16857:16916" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="17089:17190" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="17332:17435" ph=" INSERT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="17795:17857" ph=" SELECT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="18428:18487" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="18650:18714" ph=" SELECT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="18881:18974" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="19426:19487" ph=" SELECT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="19650:19709" ph=" SELECT statement (COMMENTS)" />
+                <marker date="1512082590603" expanded="true" signature="20052:20109" ph=" SELECT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="20344:20399" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="20572:20659" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="20790:20864" ph=" INSERT statement (COMMENTS)" />
+                <marker date="1512082590603" expanded="true" signature="21294:21351" ph=" SELECT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="21519:21574" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="21747:21836" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="21980:22080" ph=" UPDATE statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="22393:22523" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="22995:23050" ph=" SELECT statement (CARD)" />
+                <marker date="1512082590603" expanded="true" signature="23218:23273" ph=" SELECT statement (TEAM)" />
+                <marker date="1512082590603" expanded="true" signature="23446:23535" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512082590603" expanded="true" signature="23679:23757" ph=" UPDATE statement (CARD)" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ViewCard.java">
+      <file leaf-file-name="MysqlCon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/MysqlCon.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Group24/Trello/ControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4767">
+              <caret line="247" column="27" lean-forward="false" selection-start-line="247" selection-start-column="27" selection-end-line="247" selection-end-column="27" />
               <folding>
-                <marker date="1512065555478" expanded="true" signature="4748:4806" ph=" SELECT statement (CARD)" />
-                <marker date="1512065555478" expanded="true" signature="5046:5101" ph=" SELECT statement (TEAM)" />
-                <marker date="1512065555478" expanded="true" signature="5340:5400" ph=" SELECT statement (CARD)" />
-                <marker date="1512065555478" expanded="true" signature="5643:5728" ph=" SELECT statement (MEMBER)" />
-                <marker date="1512065555478" expanded="true" signature="5973:6030" ph=" SELECT statement (CARD)" />
-                <marker date="1512065555478" expanded="true" signature="6269:6324" ph=" SELECT statement (COMMENTS)" />
-                <marker date="1512065555478" expanded="true" signature="8683:8740" ph=" SELECT statement (CARD)" />
-                <marker date="1512065555478" expanded="true" signature="9154:9209" ph=" SELECT statement (TEAM)" />
-                <marker date="1512065555478" expanded="true" signature="9490:9577" ph=" SELECT statement (MEMBER)" />
-                <marker date="1512065555478" expanded="true" signature="9811:9894" ph=" INSERT statement (COMMENTS)" />
-                <marker date="1512065555478" expanded="true" signature="11330:11387" ph=" SELECT statement (CARD)" />
-                <marker date="1512065555478" expanded="true" signature="11801:11856" ph=" SELECT statement (TEAM)" />
-                <marker date="1512065555478" expanded="true" signature="12137:12234" ph=" SELECT statement (MEMBER)" />
-                <marker date="1512065555478" expanded="true" signature="12461:12580" ph=" UPDATE statement (CARD)" />
+                <marker date="1512084477092" expanded="true" signature="3896:4018" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512084477092" expanded="true" signature="9613:9663" ph=" SELECT statement (BOARD)" />
+                <marker date="1512084477092" expanded="true" signature="12837:12910" ph=" SELECT statement (TEAM)" />
+                <marker date="1512084477092" expanded="true" signature="13122:13164" ph=" SELECT statement (TEAM)" />
+                <marker date="1512084477092" expanded="true" signature="14687:14748" ph=" SELECT statement (BOARD_TEAM)" />
+                <marker date="1512084477092" expanded="true" signature="16462:16524" ph=" SELECT statement (TEAM)" />
+                <marker date="1512084477092" expanded="true" signature="16692:16782" ph=" SELECT statement (MEMBER)" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Del.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Del.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Del.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3297">
-              <caret line="179" column="38" lean-forward="false" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
+            <state relative-caret-position="21">
+              <caret line="348" column="50" lean-forward="false" selection-start-line="348" selection-start-column="50" selection-end-line="348" selection-end-column="50" />
               <folding>
-                <marker date="1512065612019" expanded="true" signature="2842:2973" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="4170:4323" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="4551:4627" ph=" SELECT statement (TEAM)" />
-                <marker date="1512065612019" expanded="true" signature="4814:4861" ph=" DELETE statement (MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="4900:4951" ph=" DELETE statement (BOARD_TEAM)" />
-                <marker date="1512065612019" expanded="true" signature="5007:5074" ph=" DELETE statement (TEAM)" />
-                <marker date="1512065612019" expanded="true" signature="6378:6436" ph=" SELECT statement (BOARD)" />
-                <marker date="1512065612019" expanded="true" signature="7398:7503" ph=" SELECT statement (BOARD)" />
-                <marker date="1512065612019" expanded="true" signature="7802:7897" ph=" DELETE statement (BOARD)" />
-                <marker date="1512065612019" expanded="true" signature="9209:9340" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="10336:10408" ph=" SELECT statement (TEAM)" />
-                <marker date="1512065612019" expanded="true" signature="10632:10691" ph=" SELECT statement (MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="11900:12050" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="12349:12504" ph=" DELETE statement (TEAM, MEMBER)" />
-                <marker date="1512065612019" expanded="true" signature="13829:13997" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-                <marker date="1512065612019" expanded="true" signature="14980:15081" ph=" SELECT statement (BOARD)" />
-                <marker date="1512065612019" expanded="true" signature="15380:15581" ph=" DELETE statement (BOARD, BOARD_TEAM, TEAM)" />
+                <marker date="1512086545239" expanded="true" signature="2873:3004" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="3825:3978" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="4206:4282" ph=" SELECT statement (TEAM)" />
+                <marker date="1512086545239" expanded="true" signature="4469:4516" ph=" DELETE statement (MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="4555:4606" ph=" DELETE statement (BOARD_TEAM)" />
+                <marker date="1512086545239" expanded="true" signature="4662:4729" ph=" DELETE statement (TEAM)" />
+                <marker date="1512086545239" expanded="true" signature="5672:5730" ph=" SELECT statement (BOARD)" />
+                <marker date="1512086545239" expanded="true" signature="6317:6422" ph=" SELECT statement (BOARD)" />
+                <marker date="1512086545239" expanded="true" signature="6721:6816" ph=" DELETE statement (BOARD)" />
+                <marker date="1512086545239" expanded="true" signature="7767:7898" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="8533:8605" ph=" SELECT statement (TEAM)" />
+                <marker date="1512086545239" expanded="true" signature="8829:8888" ph=" SELECT statement (MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="9722:9872" ph=" SELECT statement (TEAM, MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="10171:10326" ph=" DELETE statement (TEAM, MEMBER)" />
+                <marker date="1512086545239" expanded="true" signature="11290:11458" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+                <marker date="1512086545239" expanded="true" signature="12066:12167" ph=" SELECT statement (BOARD)" />
+                <marker date="1512086545239" expanded="true" signature="12466:12667" ph=" DELETE statement (BOARD, BOARD_TEAM, TEAM)" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cardui.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1512069743053" expanded="true" signature="2538:2668" ph=" SELECT statement (TEAM, MEMBER)" />
-                <marker date="1512069743053" expanded="true" signature="4744:4799" ph=" SELECT statement (LIST)" />
-                <marker date="1512069743053" expanded="true" signature="5168:5223" ph=" SELECT statement (TEAM)" />
-                <marker date="1512069743053" expanded="true" signature="5474:5581" ph=" SELECT statement (MEMBER)" />
-                <marker date="1512069743053" expanded="true" signature="5783:5888" ph=" INSERT statement (CARD)" />
-              </folding>
->>>>>>> Nikhita
             </state>
           </provider>
         </entry>
@@ -147,14 +144,16 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
-=======
   <component name="FindInProjectRecents">
     <findStrings>
       <find>displayLi</find>
+      <find>listmy</find>
+      <find>checkEx</find>
+      <find>add</find>
+      <find>displaying</find>
+      <find>lista</find>
     </findStrings>
   </component>
->>>>>>> Nikhita
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -163,44 +162,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/AddTeamMem.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java" />
-=======
->>>>>>> Nikhita
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Del.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/MysqlCon.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/User.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Login.java" />
-=======
->>>>>>> Nikhita
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/signup.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Homepage.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/TeamPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/AddList.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/BoardPage.java" />
-=======
->>>>>>> Nikhita
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/CreBoard.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Team_cre.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/CreTeam_gui.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/TeamBoard.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Controller.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-=======
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/BoardPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/ViewCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Group24/Trello/ControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/AddTeamMem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Group24/Trello/Del.java" />
       </list>
     </option>
   </component>
@@ -212,7 +194,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
->>>>>>> Nikhita
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1666" />
@@ -233,8 +214,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,8 +261,6 @@
             </path>
             <path>
               <item name="Trello" type="b2602c69:ProjectViewProjectNode" />
-<<<<<<< HEAD
-=======
               <item name="Trello" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
@@ -301,15 +282,12 @@
             </path>
             <path>
               <item name="Trello" type="b2602c69:ProjectViewProjectNode" />
->>>>>>> Nikhita
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,33 +313,8 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="RunManager" selected="Application.Login">
-=======
-  <component name="RunManager" selected="JUnit.Group24.Trello in Trello">
->>>>>>> Nikhita
-    <configuration name="Cardui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Group24.Trello.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Group24.Trello.Cardui" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Trello" />
-      <envs />
-    </configuration>
-<<<<<<< HEAD
-=======
-    <configuration name="Group24.Trello in Trello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testCheckExistingBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="Group24.Trello.*" />
@@ -372,9 +325,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Group24.Trello" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="Group24.Trello.ControllerTest" />
+      <option name="METHOD_NAME" value="testCheckExistingBoard" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -386,7 +339,81 @@
       <envs />
       <patterns />
     </configuration>
->>>>>>> Nikhita
+    <configuration name="ControllerTest.testDisplayingBoardsForTeam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Group24.Trello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Trello" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Group24.Trello" />
+      <option name="MAIN_CLASS_NAME" value="Group24.Trello.ControllerTest" />
+      <option name="METHOD_NAME" value="testDisplayingBoardsForTeam" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ControllerTest.testDisplayingTeamMembers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Group24.Trello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Trello" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Group24.Trello" />
+      <option name="MAIN_CLASS_NAME" value="Group24.Trello.ControllerTest" />
+      <option name="METHOD_NAME" value="testDisplayingTeamMembers" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ControllerTest.testFetchingBoardDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Group24.Trello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Trello" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Group24.Trello" />
+      <option name="MAIN_CLASS_NAME" value="Group24.Trello.ControllerTest" />
+      <option name="METHOD_NAME" value="testFetchingBoardDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -487,27 +514,20 @@
       <properties />
       <listeners />
     </configuration>
-<<<<<<< HEAD
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.Cardui" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ControllerTest.testCheckExistingBoard" />
       <item index="1" class="java.lang.String" itemvalue="Application.Login" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerTest.testFetchingBoardDetails" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerTest.testDisplayingBoardsForTeam" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ControllerTest.testDisplayingTeamMembers" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Login" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Cardui" />
-=======
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.Cardui" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Login" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Group24.Trello in Trello" />
-    </list>
-    <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Group24.Trello in Trello" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Login" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Cardui" />
->>>>>>> Nikhita
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerTest.testDisplayingTeamMembers" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerTest.testDisplayingBoardsForTeam" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerTest.testFetchingBoardDetails" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ControllerTest.testCheckExistingBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -524,17 +544,36 @@
     </task>
     <servers />
   </component>
-<<<<<<< HEAD
-  <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.4421875" order="0" side_tool="true" content_ui="tabs" />
-=======
   <component name="TestHistory">
-    <history-entry file="Group24_Trello_in_Trello - 2017.11.30 at 13h 50m 11s.xml">
-      <configuration name="Group24.Trello in Trello" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testCheckExistingBoard - 2017.11.30 at 17h 22m 49s.xml">
+      <configuration name="ControllerTest.testCheckExistingBoard" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testDisplayCardDescription - 2017.11.30 at 17h 19m 58s.xml">
+      <configuration name="ControllerTest.testDisplayCardDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testDisplayCardDescription - 2017.11.30 at 17h 20m 55s.xml">
+      <configuration name="ControllerTest.testDisplayCardDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testDisplayListsInBoard - 2017.11.30 at 17h 21m 59s.xml">
+      <configuration name="ControllerTest.testDisplayListsInBoard" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testDisplayingBoardsForTeam - 2017.11.30 at 17h 25m 39s.xml">
+      <configuration name="ControllerTest.testDisplayingBoardsForTeam" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testDisplayingTeamMembers - 2017.11.30 at 17h 28m 03s.xml">
+      <configuration name="ControllerTest.testDisplayingTeamMembers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testFetchingBoardDetails - 2017.11.30 at 17h 25m 17s.xml">
+      <configuration name="ControllerTest.testFetchingBoardDetails" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testListAllUsers - 2017.11.30 at 17h 17m 29s.xml">
+      <configuration name="ControllerTest.testListAllUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testListAllUsers - 2017.11.30 at 17h 19m 18s.xml">
+      <configuration name="ControllerTest.testListAllUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testListAllUsers - 2017.11.30 at 17h 19m 40s.xml">
+      <configuration name="ControllerTest.testListAllUsers" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -543,8 +582,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.4484375" order="0" side_tool="true" content_ui="tabs" />
->>>>>>> Nikhita
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.45677084" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -556,41 +594,24 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.46458334" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.54322916" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5578125" order="7" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5515625" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
->>>>>>> Nikhita
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> Nikhita
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-<<<<<<< HEAD
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.46041667" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.45416668" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
->>>>>>> Nikhita
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -598,94 +619,26 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-<<<<<<< HEAD
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Group24/Trello/Board.java</url>
-          <line>75</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
-=======
->>>>>>> Nikhita
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        <state relative-caret-position="84">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511771250391" expanded="true" signature="3047:3124" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1511771250391" expanded="true" signature="3162:3323" ph=" INSERT statement (USERDETAILS)" />
-            <marker date="1511771250391" expanded="true" signature="4439:4560" ph=" INSERT statement (BOARD)" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1512069743053" expanded="true" signature="2538:2668" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="4744:4799" ph=" SELECT statement (LIST)" />
-            <marker date="1512069743053" expanded="true" signature="5168:5223" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069743053" expanded="true" signature="5474:5581" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="5783:5888" ph=" INSERT statement (CARD)" />
->>>>>>> Nikhita
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> Nikhita
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
->>>>>>> Nikhita
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java" />
->>>>>>> Nikhita
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="19" />
-<<<<<<< HEAD
-          <folding>
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-          </folding>
-=======
->>>>>>> Nikhita
         </state>
       </provider>
     </entry>
@@ -695,42 +648,18 @@
           <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-<<<<<<< HEAD
-            <marker date="1511734130919" expanded="true" signature="2109:2141" ph=" SELECT statement (MEMBER)" />
-            <marker date="1511734130919" expanded="true" signature="3406:3427" ph=" SELECT statement (MEMBER)" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511771250391" expanded="true" signature="3047:3124" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1511771250391" expanded="true" signature="3162:3323" ph=" INSERT statement (USERDETAILS)" />
-            <marker date="1511771250391" expanded="true" signature="4439:4560" ph=" INSERT statement (BOARD)" />
-=======
-            <marker date="1512069743053" expanded="true" signature="2538:2668" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="4744:4799" ph=" SELECT statement (LIST)" />
-            <marker date="1512069743053" expanded="true" signature="5168:5223" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069743053" expanded="true" signature="5474:5581" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="5783:5888" ph=" INSERT statement (CARD)" />
->>>>>>> Nikhita
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java" />
->>>>>>> Nikhita
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -740,42 +669,18 @@
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-<<<<<<< HEAD
-            <marker date="1511734130919" expanded="true" signature="2109:2141" ph=" SELECT statement (MEMBER)" />
-            <marker date="1511734130919" expanded="true" signature="3406:3427" ph=" SELECT statement (MEMBER)" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511771250391" expanded="true" signature="3047:3124" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1511771250391" expanded="true" signature="3162:3323" ph=" INSERT statement (USERDETAILS)" />
-            <marker date="1511771250391" expanded="true" signature="4439:4560" ph=" INSERT statement (BOARD)" />
-=======
-            <marker date="1512069743053" expanded="true" signature="2538:2668" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="4744:4799" ph=" SELECT statement (LIST)" />
-            <marker date="1512069743053" expanded="true" signature="5168:5223" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069743053" expanded="true" signature="5474:5581" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="5783:5888" ph=" INSERT statement (CARD)" />
->>>>>>> Nikhita
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java" />
->>>>>>> Nikhita
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,123 +690,15 @@
           <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-<<<<<<< HEAD
-            <marker date="1511734130919" expanded="true" signature="2109:2141" ph=" SELECT statement (MEMBER)" />
-            <marker date="1511734130919" expanded="true" signature="3406:3427" ph=" SELECT statement (MEMBER)" />
-=======
-            <marker date="1512069743053" expanded="true" signature="2538:2668" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="4744:4799" ph=" SELECT statement (LIST)" />
-            <marker date="1512069743053" expanded="true" signature="5168:5223" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069743053" expanded="true" signature="5474:5581" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="5783:5888" ph=" INSERT statement (CARD)" />
->>>>>>> Nikhita
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-=======
->>>>>>> Nikhita
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Capture.JPG">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Del.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3297">
-          <caret line="179" column="38" lean-forward="true" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
-          <folding>
-            <marker date="1511735085742" expanded="true" signature="2513:2644" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511735085742" expanded="true" signature="3447:3523" ph=" SELECT statement (TEAM)" />
-            <marker date="1511735085742" expanded="true" signature="3710:3757" ph=" DELETE statement (MEMBER)" />
-            <marker date="1511735085742" expanded="true" signature="3796:3847" ph=" DELETE statement (BOARD_TEAM)" />
-            <marker date="1511735085742" expanded="true" signature="3903:3970" ph=" DELETE statement (TEAM)" />
-            <marker date="1511735085742" expanded="true" signature="4841:4900" ph=" SELECT statement (BOARD)" />
-            <marker date="1511735085742" expanded="true" signature="5693:5771" ph=" SELECT statement (BOARD)" />
-            <marker date="1511735085742" expanded="true" signature="5959:6010" ph=" DELETE statement (BOARD_TEAM)" />
-            <marker date="1511735085742" expanded="true" signature="6066:6135" ph=" DELETE statement (BOARD)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/eclipse/wb/swing/FocusTraversalOnArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-295">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/javax/swing/ImageIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3654">
-          <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-          <folding>
-            <element signature="e#6742#6743#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/signup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="167" column="28" lean-forward="false" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/MysqlCon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.8-dmr/mysql-connector-java-8.0.8-dmr.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Trello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="97" column="67" lean-forward="true" selection-start-line="97" selection-start-column="67" selection-end-line="97" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511771250391" expanded="true" signature="3047:3124" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1511771250391" expanded="true" signature="3162:3323" ph=" INSERT statement (USERDETAILS)" />
-            <marker date="1511771250391" expanded="true" signature="4439:4560" ph=" INSERT statement (BOARD)" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/task.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/eclipse/wb/swing/FocusTraversalOnArray.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -939,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,148 +760,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Group24/Trello/ControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8710">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <marker date="1511904332142" expanded="true" signature="3896:4018" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511904332142" expanded="true" signature="9662:9712" ph=" SELECT statement (BOARD)" />
-            <marker date="1511904332142" expanded="true" signature="12628:12701" ph=" SELECT statement (TEAM)" />
-            <marker date="1511904332142" expanded="true" signature="12913:12955" ph=" SELECT statement (TEAM)" />
-            <marker date="1511904332142" expanded="true" signature="14478:14539" ph=" SELECT statement (BOARD_TEAM)" />
-            <marker date="1511904332142" expanded="true" signature="16260:16322" ph=" SELECT statement (TEAM)" />
-            <marker date="1511904332142" expanded="true" signature="16490:16580" ph=" SELECT statement (MEMBER)" />
->>>>>>> Nikhita
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4200">
-          <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511734130919" expanded="true" signature="2109:2141" ph=" SELECT statement (MEMBER)" />
-            <marker date="1511734130919" expanded="true" signature="3406:3427" ph=" SELECT statement (MEMBER)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/java/awt/EventDispatchThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="e#2706#2707#0" expanded="false" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2037">
-          <caret line="116" column="46" lean-forward="true" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddTeamMem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1234">
-          <caret line="88" column="13" lean-forward="false" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
->>>>>>> Nikhita
-          </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Team_cre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="367" column="14" lean-forward="false" selection-start-line="367" selection-start-column="14" selection-end-line="367" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511773044306" expanded="true" signature="650:686" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="650:736" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="670:686" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="1533:1644" ph=" INSERT statement (USERDETAILS)" />
-            <marker date="1511773044306" expanded="true" signature="2468:2539" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="3190:3257" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="3190:3258" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="3190:3259" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1511773044306" expanded="true" signature="3842:3973" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511773044306" expanded="true" signature="4458:4502" ph=" SELECT statement (BOARD)" />
-            <marker date="1511773044306" expanded="true" signature="4458:4516" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511773044306" expanded="true" signature="5005:5145" ph=" SELECT statement (BOARD, TEAM, BORAD_TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="5005:5162" ph=" SELECT statement (BOARD, TEAM, BORAD_TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="5005:5163" ph=" SELECT statement (BOARD, TEAM, BORAD_TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="5005:5165" ph=" SELECT statement (BOARD, TEAM, BORAD_TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="5654:5792" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="5654:5809" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="6297:6403" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511773044306" expanded="true" signature="6886:6989" ph=" SELECT statement (BOARD, LIST)" />
-            <marker date="1511773044306" expanded="true" signature="7488:7544" ph=" SELECT statement (BOARD)" />
-            <marker date="1511773044306" expanded="true" signature="7769:7838" ph=" INSERT statement (LIST)" />
-            <marker date="1511773044306" expanded="true" signature="8441:8458" ph=" INSERT statement (BOARD)" />
-            <marker date="1511773044306" expanded="true" signature="8441:8469" ph=" INSERT statement (BOARD)" />
-            <marker date="1511773044306" expanded="true" signature="8441:8546" ph=" INSERT statement (BOARD)" />
-            <marker date="1511773044306" expanded="true" signature="9273:9404" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511773044306" expanded="true" signature="9917:9973" ph=" SELECT statement (TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="10626:10693" ph=" INSERT statement (TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="10626:10734" ph=" INSERT statement (TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="11038:11100" ph=" SELECT statement (TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="11253:11324" ph=" INSERT statement (MEMBER)" />
-            <marker date="1511773044306" expanded="true" signature="11749:11860" ph=" SELECT statement (BOARD, BOARD_TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="12438:12496" ph=" SELECT statement (BOARD)" />
-            <marker date="1511773044306" expanded="true" signature="12675:12732" ph=" SELECT statement (TEAM)" />
-            <marker date="1511773044306" expanded="true" signature="12952:13017" ph=" INSERT statement (BOARD_TEAM)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddTeamMem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="88" column="43" lean-forward="true" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
-          <folding>
-            <marker date="1511733707702" expanded="true" signature="2407:2538" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1511733707702" expanded="true" signature="3361:3395" ph=" SELECT statement (USERDETAILS)" />
-            <marker date="1511733707702" expanded="true" signature="4417:4495" ph=" SELECT statement (TEAM)" />
-            <marker date="1511733707702" expanded="true" signature="4737:4852" ph=" INSERT statement (MEMBER)" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/BoardPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -1114,41 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1512069743053" expanded="true" signature="2538:2668" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="4744:4799" ph=" SELECT statement (LIST)" />
-            <marker date="1512069743053" expanded="true" signature="5168:5223" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069743053" expanded="true" signature="5474:5581" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512069743053" expanded="true" signature="5783:5888" ph=" INSERT statement (CARD)" />
->>>>>>> Nikhita
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/BoardPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="132" column="26" lean-forward="true" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/CreBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-226">
           <caret line="123" column="45" lean-forward="false" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
->>>>>>> Nikhita
           <folding />
         </state>
       </provider>
@@ -1157,104 +787,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Indexing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/CreTeam_gui.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-415">
           <caret line="131" column="70" lean-forward="false" selection-start-line="131" selection-start-column="70" selection-end-line="131" selection-end-column="70" />
->>>>>>> Nikhita
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Del.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3297">
-          <caret line="179" column="38" lean-forward="false" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
-          <folding>
-            <marker date="1512065612019" expanded="true" signature="2842:2973" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="4170:4323" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="4551:4627" ph=" SELECT statement (TEAM)" />
-            <marker date="1512065612019" expanded="true" signature="4814:4861" ph=" DELETE statement (MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="4900:4951" ph=" DELETE statement (BOARD_TEAM)" />
-            <marker date="1512065612019" expanded="true" signature="5007:5074" ph=" DELETE statement (TEAM)" />
-            <marker date="1512065612019" expanded="true" signature="6378:6436" ph=" SELECT statement (BOARD)" />
-            <marker date="1512065612019" expanded="true" signature="7398:7503" ph=" SELECT statement (BOARD)" />
-            <marker date="1512065612019" expanded="true" signature="7802:7897" ph=" DELETE statement (BOARD)" />
-            <marker date="1512065612019" expanded="true" signature="9209:9340" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="10336:10408" ph=" SELECT statement (TEAM)" />
-            <marker date="1512065612019" expanded="true" signature="10632:10691" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="11900:12050" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="12349:12504" ph=" DELETE statement (TEAM, MEMBER)" />
-            <marker date="1512065612019" expanded="true" signature="13829:13997" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-            <marker date="1512065612019" expanded="true" signature="14980:15081" ph=" SELECT statement (BOARD)" />
-            <marker date="1512065612019" expanded="true" signature="15380:15581" ph=" DELETE statement (BOARD, BOARD_TEAM, TEAM)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Homepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="250" column="21" lean-forward="true" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
->>>>>>> Nikhita
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1948">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <marker date="1511744683015" expanded="true" signature="2880:2982" ph=" SELECT statement (USERCREDS)" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ListPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3019">
           <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
->>>>>>> Nikhita
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/CreTeam_gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="131" column="70" lean-forward="false" selection-start-line="131" selection-start-column="70" selection-end-line="131" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/DisplayTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1263,32 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/MysqlCon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
->>>>>>> Nikhita
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding>
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Homepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="250" column="21" lean-forward="true" selection-start-line="250" selection-start-column="21" selection-end-line="250" selection-end-column="21" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3985">
@@ -1309,31 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-37">
           <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
->>>>>>> Nikhita
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/TeamBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="183">
-=======
-        <state relative-caret-position="-625">
->>>>>>> Nikhita
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/TeamPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="873">
-=======
-        <state relative-caret-position="299">
->>>>>>> Nikhita
-          <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1342,102 +844,216 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Group24/Trello/ConsoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/TeamPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2898">
+          <caret line="160" column="8" lean-forward="false" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/CreBoard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/TeamBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+        <state relative-caret-position="341">
+          <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Packages/microsoft.windowscommunicationsapps_8wekyb3d8bbwe/LocalState/Files/S0/23/NewControllerTest[643].java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="202" column="30" lean-forward="false" selection-start-line="202" selection-start-column="30" selection-end-line="202" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="115" column="26" lean-forward="true" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+        <state relative-caret-position="383">
+          <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
           <folding />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/User.java">
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding>
-            <element signature="e#610#611#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Homepage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/ViewCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="243">
+          <caret line="211" column="80" lean-forward="true" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Cardui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="128" column="44" lean-forward="false" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
           <folding>
-            <marker date="1512065555478" expanded="true" signature="4748:4806" ph=" SELECT statement (CARD)" />
-            <marker date="1512065555478" expanded="true" signature="5046:5101" ph=" SELECT statement (TEAM)" />
-            <marker date="1512065555478" expanded="true" signature="5340:5400" ph=" SELECT statement (CARD)" />
-            <marker date="1512065555478" expanded="true" signature="5643:5728" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512065555478" expanded="true" signature="5973:6030" ph=" SELECT statement (CARD)" />
-            <marker date="1512065555478" expanded="true" signature="6269:6324" ph=" SELECT statement (COMMENTS)" />
-            <marker date="1512065555478" expanded="true" signature="8683:8740" ph=" SELECT statement (CARD)" />
-            <marker date="1512065555478" expanded="true" signature="9154:9209" ph=" SELECT statement (TEAM)" />
-            <marker date="1512065555478" expanded="true" signature="9490:9577" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512065555478" expanded="true" signature="9811:9894" ph=" INSERT statement (COMMENTS)" />
-            <marker date="1512065555478" expanded="true" signature="11330:11387" ph=" SELECT statement (CARD)" />
-            <marker date="1512065555478" expanded="true" signature="11801:11856" ph=" SELECT statement (TEAM)" />
-            <marker date="1512065555478" expanded="true" signature="12137:12234" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512065555478" expanded="true" signature="12461:12580" ph=" UPDATE statement (CARD)" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/AddTeamMem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="83" column="22" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Group24/Trello/ControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4767">
+          <caret line="247" column="27" lean-forward="false" selection-start-line="247" selection-start-column="27" selection-end-line="247" selection-end-column="27" />
+          <folding>
+            <marker date="1512084477092" expanded="true" signature="3896:4018" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512084477092" expanded="true" signature="9613:9663" ph=" SELECT statement (BOARD)" />
+            <marker date="1512084477092" expanded="true" signature="12837:12910" ph=" SELECT statement (TEAM)" />
+            <marker date="1512084477092" expanded="true" signature="13122:13164" ph=" SELECT statement (TEAM)" />
+            <marker date="1512084477092" expanded="true" signature="14687:14748" ph=" SELECT statement (BOARD_TEAM)" />
+            <marker date="1512084477092" expanded="true" signature="16462:16524" ph=" SELECT statement (TEAM)" />
+            <marker date="1512084477092" expanded="true" signature="16692:16782" ph=" SELECT statement (MEMBER)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/MysqlCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="659" column="4" lean-forward="false" selection-start-line="659" selection-start-column="4" selection-end-line="659" selection-end-column="4" />
+        <state relative-caret-position="273">
+          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1512069597997" expanded="true" signature="508:594" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1512069597997" expanded="true" signature="1229:1325" ph=" INSERT statement (USERDETAILS)" />
-            <marker date="1512069597997" expanded="true" signature="1970:2026" ph=" INSERT statement (USERCREDS)" />
-            <marker date="1512069597997" expanded="true" signature="2548:2617" ph=" SELECT statement (USERCREDS)" />
-            <marker date="1512069597997" expanded="true" signature="3088:3219" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069597997" expanded="true" signature="3607:3665" ph=" SELECT statement (BOARD)" />
-            <marker date="1512069597997" expanded="true" signature="4057:4215" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="4608:4763" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="5153:5259" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069597997" expanded="true" signature="5644:5747" ph=" SELECT statement (BOARD, LIST)" />
-            <marker date="1512069597997" expanded="true" signature="6136:6287" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="6688:6744" ph=" SELECT statement (BOARD)" />
-            <marker date="1512069597997" expanded="true" signature="6912:6981" ph=" INSERT statement (LIST)" />
-            <marker date="1512069597997" expanded="true" signature="7456:7546" ph=" INSERT statement (BOARD)" />
-            <marker date="1512069597997" expanded="true" signature="8118:8249" ph=" SELECT statement (TEAM, MEMBER)" />
-            <marker date="1512069597997" expanded="true" signature="8664:8720" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="9245:9338" ph=" INSERT statement (TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="9579:9641" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="9752:9823" ph=" INSERT statement (MEMBER)" />
-            <marker date="1512069597997" expanded="true" signature="10159:10270" ph=" SELECT statement (BOARD, BOARD_TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="10732:10790" ph=" SELECT statement (BOARD)" />
-            <marker date="1512069597997" expanded="true" signature="10921:10978" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="11145:11210" ph=" INSERT statement (BOARD_TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="11491:11525" ph=" SELECT statement (USERDETAILS)" />
-            <marker date="1512069597997" expanded="true" signature="11885:11947" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="12058:12141" ph=" INSERT statement (MEMBER)" />
-            <marker date="1512069597997" expanded="true" signature="12492:12598" ph=" SELECT statement (LIST, CARD)" />
-            <marker date="1512069597997" expanded="true" signature="12966:13054" ph=" SELECT statement (BOARD)" />
-            <marker date="1512069597997" expanded="true" signature="13633:13722" ph=" SELECT statement (USERDETAILS)" />
-            <marker date="1512069597997" expanded="true" signature="14569:14737" ph=" UPDATE statement (USERDETAILS)" />
-            <marker date="1512069597997" expanded="true" signature="15520:15590" ph=" UPDATE statement (USERCREDS)" />
-            <marker date="1512069597997" expanded="true" signature="16244:16299" ph=" SELECT statement (LIST)" />
-            <marker date="1512069597997" expanded="true" signature="16551:16606" ph=" SELECT statement (TEAM)" />
-            <marker date="1512069597997" expanded="true" signature="16779:16872" ph=" SELECT statement (MEMBER)" />
-            <marker date="1512069597997" expanded="true" signature="17020:17107" ph=" INSERT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="401:491" ph=" SELECT statement (USERCREDS)" />
+            <marker date="1512082590603" expanded="true" signature="1128:1224" ph=" INSERT statement (USERDETAILS)" />
+            <marker date="1512082590603" expanded="true" signature="1874:1930" ph=" INSERT statement (USERCREDS)" />
+            <marker date="1512082590603" expanded="true" signature="2451:2520" ph=" SELECT statement (USERCREDS)" />
+            <marker date="1512082590603" expanded="true" signature="2994:3129" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="3521:3583" ph=" SELECT statement (BOARD)" />
+            <marker date="1512082590603" expanded="true" signature="3979:4141" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="4538:4697" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="5091:5201" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="5590:5697" ph=" SELECT statement (BOARD, LIST)" />
+            <marker date="1512082590603" expanded="true" signature="6086:6241" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="6647:6707" ph=" SELECT statement (BOARD)" />
+            <marker date="1512082590603" expanded="true" signature="6877:6946" ph=" INSERT statement (LIST)" />
+            <marker date="1512082590603" expanded="true" signature="7421:7511" ph=" INSERT statement (BOARD)" />
+            <marker date="1512082590603" expanded="true" signature="8087:8222" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="8642:8699" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="9235:9328" ph=" INSERT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="9570:9633" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="9748:9827" ph=" INSERT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="10172:10287" ph=" SELECT statement (BOARD, BOARD_TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="10759:10821" ph=" SELECT statement (BOARD)" />
+            <marker date="1512082590603" expanded="true" signature="10955:11016" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="11186:11259" ph=" INSERT statement (BOARD_TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="11546:11580" ph=" SELECT statement (USERDETAILS)" />
+            <marker date="1512082590603" expanded="true" signature="11943:12005" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="12115:12207" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="12290:12373" ph=" INSERT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="12745:12855" ph=" SELECT statement (LIST, CARD)" />
+            <marker date="1512082590603" expanded="true" signature="13227:13323" ph=" SELECT statement (BOARD)" />
+            <marker date="1512082590603" expanded="true" signature="13915:14008" ph=" SELECT statement (USERDETAILS)" />
+            <marker date="1512082590603" expanded="true" signature="14857:15049" ph=" UPDATE statement (USERDETAILS)" />
+            <marker date="1512082590603" expanded="true" signature="15832:15910" ph=" UPDATE statement (USERCREDS)" />
+            <marker date="1512082590603" expanded="true" signature="16564:16623" ph=" SELECT statement (LIST)" />
+            <marker date="1512082590603" expanded="true" signature="16857:16916" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="17089:17190" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="17332:17435" ph=" INSERT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="17795:17857" ph=" SELECT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="18428:18487" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="18650:18714" ph=" SELECT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="18881:18974" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="19426:19487" ph=" SELECT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="19650:19709" ph=" SELECT statement (COMMENTS)" />
+            <marker date="1512082590603" expanded="true" signature="20052:20109" ph=" SELECT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="20344:20399" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="20572:20659" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="20790:20864" ph=" INSERT statement (COMMENTS)" />
+            <marker date="1512082590603" expanded="true" signature="21294:21351" ph=" SELECT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="21519:21574" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="21747:21836" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="21980:22080" ph=" UPDATE statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="22393:22523" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="22995:23050" ph=" SELECT statement (CARD)" />
+            <marker date="1512082590603" expanded="true" signature="23218:23273" ph=" SELECT statement (TEAM)" />
+            <marker date="1512082590603" expanded="true" signature="23446:23535" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512082590603" expanded="true" signature="23679:23757" ph=" UPDATE statement (CARD)" />
           </folding>
->>>>>>> Nikhita
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Group24/Trello/Del.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="348" column="50" lean-forward="false" selection-start-line="348" selection-start-column="50" selection-end-line="348" selection-end-column="50" />
+          <folding>
+            <marker date="1512086545239" expanded="true" signature="2873:3004" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="3825:3978" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="4206:4282" ph=" SELECT statement (TEAM)" />
+            <marker date="1512086545239" expanded="true" signature="4469:4516" ph=" DELETE statement (MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="4555:4606" ph=" DELETE statement (BOARD_TEAM)" />
+            <marker date="1512086545239" expanded="true" signature="4662:4729" ph=" DELETE statement (TEAM)" />
+            <marker date="1512086545239" expanded="true" signature="5672:5730" ph=" SELECT statement (BOARD)" />
+            <marker date="1512086545239" expanded="true" signature="6317:6422" ph=" SELECT statement (BOARD)" />
+            <marker date="1512086545239" expanded="true" signature="6721:6816" ph=" DELETE statement (BOARD)" />
+            <marker date="1512086545239" expanded="true" signature="7767:7898" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="8533:8605" ph=" SELECT statement (TEAM)" />
+            <marker date="1512086545239" expanded="true" signature="8829:8888" ph=" SELECT statement (MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="9722:9872" ph=" SELECT statement (TEAM, MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="10171:10326" ph=" DELETE statement (TEAM, MEMBER)" />
+            <marker date="1512086545239" expanded="true" signature="11290:11458" ph=" SELECT statement (BOARD, BOARD_TEAM, TEAM)" />
+            <marker date="1512086545239" expanded="true" signature="12066:12167" ph=" SELECT statement (BOARD)" />
+            <marker date="1512086545239" expanded="true" signature="12466:12667" ph=" DELETE statement (BOARD, BOARD_TEAM, TEAM)" />
+          </folding>
         </state>
       </provider>
     </entry>

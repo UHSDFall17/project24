@@ -26,7 +26,7 @@ public class Cardui extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtAddDueDate;
 	private JTable table_1;
-
+	Controller c1= new Controller();
 	/**
 	 * Launch the application.
 	 */
@@ -83,23 +83,8 @@ public class Cardui extends JFrame {
 		comboBox.setBounds(380, 231, 331, 32);
 		panel.add(comboBox);
 		try {
-<<<<<<< HEAD
-			
-=======
->>>>>>> Nikhita
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-		
-			Class.forName(driver).newInstance();
-		   	Connection conn = DriverManager.getConnection(url,userName,Password);
-		   	Statement st = conn.createStatement();
-		   	String queryString = "SELECT member.mem_username FROM member where member.team_id IN (select team.team_id from team where team.team_name = '"+tname+"');";
-		   	ResultSet rs = st.executeQuery(queryString); //where ps is Object of PreparedStatement
-
-		   	while(rs.next()) {
+		   	ResultSet rs=c1.displayTeamMembers(tname);
+			while(rs.next()) {
 		   		
 		   		String member = rs.getString("mem_username");
 		   		comboBox.addItem(member);
@@ -140,40 +125,13 @@ public class Cardui extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				if (cardname.getText().isEmpty())
 					JOptionPane.showMessageDialog(null, "Please enter the Card description !!!");
-				else {try {
-					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-			        String dbName = "trello1";//databese name
-			        String driver = "com.mysql.cj.jdbc.Driver";
-			        String userName = "root";
-			        String Password = "trello";// password
-			        
-			        
-			        	Class.forName(driver).newInstance();
-			        	Connection conn = DriverManager.getConnection(url,userName,Password);
-			            Statement st = conn.createStatement();
-			            Statement st1 = conn.createStatement();			  
-			            	String qu = "select list_id from list where list_name = '"+lname+"';";
-			            	ResultSet res = st.executeQuery(qu);		
-			            	String lid = null;
-			            	String mid = null;
-			            	String tid = null;
-			            	while (res.next()) {
-			            		lid = res.getString("list_id");			            	
-			            	}
-			            	Statement st3 = conn.createStatement();
-			            	String qu3 = "select team_id from team where team_name = '"+tname+"';";
-			            	ResultSet res3 = st3.executeQuery(qu3);
-			            	while (res3.next()) {
-			            		tid = res3.getString("team_id");
-			            	}
-			            	Statement st2 = conn.createStatement();
-			            	String qu2 = "select member_id from member where mem_username = '"+comboBox.getSelectedItem()+"' and team_id = '"+tid+"';";
-			            	ResultSet res2 = st2.executeQuery(qu2);
-			            	while (res2.next()) {
-			            		mid = res2.getString("member_id");
-			            	}
-			            	st1.executeUpdate("INSERT INTO card " + "VALUES ('"+lid+"','0','"+duedate.getText()+"','"+mid+"','"+cardname.getText()+"') ;");
-			            	JOptionPane.showMessageDialog(null, "Card is Created !!!");
+				else {
+					String memuname= String.valueOf(comboBox.getSelectedItem());
+					String ddt=duedate.getText();
+					String cname=cardname.getText();
+					try {
+						c1.saveCard(tname,lname,cname,memuname,ddt);
+			            JOptionPane.showMessageDialog(null, "Card is Created !!!");
 				}catch(Exception e1) {
 		        	e1.printStackTrace();
 		        	JOptionPane.showMessageDialog(null, "Card with the same description is already exist or due date is not correct !!!");

@@ -50,22 +50,14 @@ public class BoardPage extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Nikhita
 		JPanel panel = new JPanel();
 		panel.setForeground(new Color(153, 204, 255));
 		panel.setBounds(-11, 0, 639, 424);
 		panel.setBackground(new Color(0, 206, 209));
 		contentPane.add(panel);
 		panel.setLayout(null);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Nikhita
 		JButton home = new JButton("HOME");
 		home.setFont(new Font("Tahoma", Font.BOLD, 20));
 		home.addActionListener(new ActionListener() {
@@ -77,54 +69,29 @@ public class BoardPage extends JFrame {
 		});
 		home.setBounds(19, 47, 115, 75);
 		panel.add(home);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Nikhita
 		JLabel lblBoardPageFor = new JLabel("BOARD PAGE FOR:");
 		lblBoardPageFor.setForeground(Color.BLACK);
 		lblBoardPageFor.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		lblBoardPageFor.setBounds(173, 16, 197, 34);
 		panel.add(lblBoardPageFor);
-<<<<<<< HEAD
-		
-		String bname = Login.board;
-		
-=======
 
 		String bname = Login.board;
 
->>>>>>> Nikhita
 		JLabel label = new JLabel(bname);
 		label.setFont(new Font("Tahoma", Font.BOLD, 20));
 		label.setBounds(373, 16, 165, 34);
 		panel.add(label);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Nikhita
 		JLabel lblTeam = new JLabel("TEAM:");
 		lblTeam.setForeground(Color.BLACK);
 		lblTeam.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		lblTeam.setBounds(173, 64, 76, 34);
 		panel.add(lblTeam);
-<<<<<<< HEAD
-		
-		String tname = Login.team;
-		
-		JLabel label_1 = new JLabel(tname);
-		label_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		label_1.setBounds(251, 64, 165, 34);
-		panel.add(label_1);
-		
-=======
 
 
 
 
->>>>>>> Nikhita
 		JButton btnCreateNewList = new JButton("Create new list");
 		btnCreateNewList.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -137,25 +104,12 @@ public class BoardPage extends JFrame {
 		btnCreateNewList.setBackground(new Color(50, 205, 50));
 		btnCreateNewList.setBounds(38, 253, 197, 117);
 		panel.add(btnCreateNewList);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Nikhita
 		JLabel lblLists = new JLabel("LISTS");
 		lblLists.setForeground(Color.BLACK);
 		lblLists.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		lblLists.setBounds(509, 165, 95, 34);
 		panel.add(lblLists);
-<<<<<<< HEAD
-		
-		 DefaultListModel listModel = new DefaultListModel();
-		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(394, 219, 313, 340);
-		panel.add(scrollPane);
-		
-=======
 
 		DefaultListModel listModel = new DefaultListModel();
 
@@ -163,16 +117,11 @@ public class BoardPage extends JFrame {
 		scrollPane.setBounds(394, 219, 313, 340);
 		panel.add(scrollPane);
 
->>>>>>> Nikhita
 		JList list = new JList();
 		scrollPane.setViewportView(list);
 		list.setFont(new Font("Tahoma", Font.BOLD, 20));
 		list.setModel(listModel);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> Nikhita
 		JButton button = new JButton("GO");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -184,42 +133,6 @@ public class BoardPage extends JFrame {
 		});
 		button.setBounds(738, 343, 95, 49);
 		panel.add(button);
-<<<<<<< HEAD
-		
-		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
-	            Statement statement = conn.createStatement();
-	            Statement st2 = conn.createStatement();
-	            String quu = "select BoardID from board where BoardName = '"+bname+"';";
-	            ResultSet rst = st2.executeQuery(quu);
-	            String bdid = null;
-	            while(rst.next()) {
-	            	String tid = rst.getString("BoardID");
-	            	String query="select list_name from list where board_id ='"+tid+"';";
-	            	ResultSet rs=statement.executeQuery(query);	           
-	            	while (rs.next()) {
-		            	bdid = rs.getString("list_name");
-		                listModel.addElement(bdid);
-	            	}     
-	            }	
-	        
-		}catch(Exception e) {
-        	e.printStackTrace();
-        }	
-		
-	}
-}
-	
-
-=======
 
 		try {
 			String bdid =null;
@@ -261,4 +174,3 @@ public class BoardPage extends JFrame {
 
 	}
 }
->>>>>>> Nikhita

@@ -27,6 +27,7 @@ import javax.swing.DefaultComboBoxModel;
 public class Del extends JFrame {
 
 	private JPanel contentPane;
+	MysqlCon c1 = new MysqlCon();
 
 	/**
 	 * Launch the application.
@@ -112,15 +113,8 @@ public class Del extends JFrame {
 		TeamDelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-			        String dbName = "trello1";//databese name
-			        String driver = "com.mysql.cj.jdbc.Driver";
-			        String userName = "root";
-			        String Password = "trello";// password
-			        
-			        
-			        	Class.forName(driver).newInstance();
-			        	Connection conn = DriverManager.getConnection(url,userName,Password);
+					c1.EstCon();
+					Connection conn = c1.EstCon();
 			            Statement statement = conn.createStatement();
 			            Statement st = conn.createStatement();
 			            Statement st1 = conn.createStatement();
@@ -167,15 +161,9 @@ public class Del extends JFrame {
 		panel.add(boardBox);
 		
 		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
 	            Statement statement = conn.createStatement();
 	            String query="select BoardName from board where username='"+username+"';";
 	            ResultSet rs=statement.executeQuery(query);
@@ -193,15 +181,9 @@ public class Del extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-			        String dbName = "trello1";//databese name
-			        String driver = "com.mysql.cj.jdbc.Driver";
-			        String userName = "root";
-			        String Password = "trello";// password
-			        
-			        
-			        	Class.forName(driver).newInstance();
-			        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+					c1.EstCon();
+					Connection conn = c1.EstCon();
 			        	String pri = null;
 			        	Statement st = conn.createStatement();
 			        	String qu = "select privilege from board where username='"+username+"' and BoardName='"+boardBox.getSelectedItem()+"';";
@@ -242,15 +224,9 @@ public class Del extends JFrame {
 		panel.add(tbox);
 		
 		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
 	            Statement statement = conn.createStatement();
 	            String query="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='"+username+"');";
 	            ResultSet rs=statement.executeQuery(query);
@@ -270,15 +246,9 @@ public class Del extends JFrame {
 		panel.add(mbox);
 					
 		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
 	        	String ttid = null;
 	        	Statement st = conn.createStatement();
 	        	String qu = "select team_id from team where team_name = '"+tbox.getSelectedItem()+"';";
@@ -312,15 +282,9 @@ public class Del extends JFrame {
 		btnRemove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-			        String dbName = "trello1";//databese name
-			        String driver = "com.mysql.cj.jdbc.Driver";
-			        String userName = "root";
-			        String Password = "trello";// password
-			        
-			        
-			        	Class.forName(driver).newInstance();
-			        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+					c1.EstCon();
+					Connection conn = c1.EstCon();
 			        	String pri = null;
 			        	Statement st = conn.createStatement();
 			        	String qu = "select privilege from member where mem_username='"+username+"' and team_id in( select team_id from team where team_name='"+tbox.getSelectedItem()+"');";
@@ -359,15 +323,9 @@ public class Del extends JFrame {
 		panel.add(bBox);
 		
 		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
 	        	String bname = null;
 	        	Statement st = conn.createStatement();
 	        	String qu = "select BoardName from board where BoardID in (select board_id from board_team where team_id in (select team_id from team where team_name='"+tbox.getSelectedItem()+"'));";
@@ -386,15 +344,9 @@ public class Del extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 
 				try {
-					String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-			        String dbName = "trello1";//databese name
-			        String driver = "com.mysql.cj.jdbc.Driver";
-			        String userName = "root";
-			        String Password = "trello";// password
-			        
-			        
-			        	Class.forName(driver).newInstance();
-			        	Connection conn = DriverManager.getConnection(url,userName,Password);
+
+					c1.EstCon();
+					Connection conn = c1.EstCon();
 			        	String pri = null;
 			        	Statement st = conn.createStatement();
 			        	String qu = "select privilege from board where username='"+username+"' and BoardName='"+bBox.getSelectedItem()+"';";
