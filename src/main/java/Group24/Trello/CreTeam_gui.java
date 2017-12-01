@@ -16,18 +16,11 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.DropMode;
-import javax.swing.SwingConstants;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.awt.event.ActionEvent;
-import java.util.List;
-
 public class CreTeam_gui extends JFrame {
 
 	private JPanel contentPane;
@@ -67,8 +60,6 @@ public class CreTeam_gui extends JFrame {
 		panel.setBackground(new Color(60, 179, 113));
 		contentPane.add(panel);
 		panel.setLayout(null);
-
-		String usnme = Login.uname;
 
 		JLabel lblNewTeam = new JLabel("NEW TEAM");
 		lblNewTeam.setForeground(Color.WHITE);

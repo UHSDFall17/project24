@@ -1,7 +1,5 @@
 package Group24.Trello;
 
-import com.mysql.cj.api.mysqla.result.Resultset;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -14,17 +12,13 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.JTextPane;
-import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import javax.swing.JScrollPane;
 import javax.swing.JFormattedTextField;
@@ -134,7 +128,7 @@ public class ViewCard extends JFrame {
 		
 		String cname = Login.card;
 		String tname = Login.team;	
-		String lname = Login.list;
+		
 		try {
 			String ddt=c1.displayCardDueDate(cname);
 			String memn=c1.displayCardMembers(tname,cname);

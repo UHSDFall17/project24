@@ -39,12 +39,12 @@ public class Team_cre {
 		this.team_visibility = team_visibility;
 	}
 
-	public Team_cre() {
+	/*public Team_cre() {
 		super();
 		this.team_name = team_name;
 		this.team_description = team_description;
 		this.team_members = team_members;
-	}
+	}*/
 
 
 }

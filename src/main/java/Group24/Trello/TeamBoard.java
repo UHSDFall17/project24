@@ -11,10 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -53,9 +50,7 @@ public class TeamBoard extends JFrame {
 		setContentPane(contentPane);
 
 		String username = Login.uname;
-		String teamname = Login.team;
-		String boardname = Login.board;
-
+		
 		JPanel panel = new JPanel();
 		panel.setForeground(new Color(153, 204, 255));
 		panel.setBounds(-11, 0, 639, 424);

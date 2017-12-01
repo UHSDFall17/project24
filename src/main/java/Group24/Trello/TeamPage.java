@@ -11,10 +11,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;

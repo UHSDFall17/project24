@@ -6,11 +6,6 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -148,7 +143,7 @@ public class Profile extends JFrame {
 					user2.setFname(fname.getText());
 					user2.setEmailID(emailt.getText());
 					user2.setCompany(company.getText());
-					int n1=c1.updateUserDetails(user2);
+					c1.updateUserDetails(user2);
 
 
 
@@ -199,7 +194,7 @@ public class Profile extends JFrame {
 						user1.setUsername(uname);
 						try {
 							Controller c1=new Controller();
-							int res=c1.updateUserCreds(user1);
+							c1.updateUserCreds(user1);
 							JOptionPane.showMessageDialog(null, "Password updated" );
 						}catch(Exception e1) {
 							e1.printStackTrace();

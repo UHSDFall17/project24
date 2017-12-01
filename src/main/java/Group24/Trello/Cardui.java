@@ -9,23 +9,16 @@ import javax.swing.table.DefaultTableModel;
 
 import java.awt.Font;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 import javax.swing.*;
 import java.util.*;
-import java.sql.*;
-
 public class Cardui extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtAddDueDate;
-	private JTable table_1;
 	Controller c1= new Controller();
 	/**
 	 * Launch the application.
@@ -115,9 +108,6 @@ public class Cardui extends JFrame {
 		duedate.setText("yyyy/mm/dd");
 		duedate.setBounds(424, 349, 147, 39);
 		panel.add(duedate);
-		
-		String uname= Login.uname;
-		String cname = Login.card;		
 		
 		
 		JButton btnSave = new JButton("Save");

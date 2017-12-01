@@ -3,28 +3,17 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import javax.swing.UIManager;
-import java.awt.SystemColor;
 import javax.swing.JButton;
 import java.awt.Font;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.BevelBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JFormattedTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.awt.event.ActionEvent;
-import javax.swing.ImageIcon;
 
+import java.awt.event.ActionEvent;
 public class Login {
 
 	public JFrame frame;

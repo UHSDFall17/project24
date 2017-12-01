@@ -1,7 +1,7 @@
 package Group24.Trello;
 
-import java.util.*;
-import java.lang.*;
+import java.util.Scanner;
+
 public class Board {
 
 	private String BoardName;

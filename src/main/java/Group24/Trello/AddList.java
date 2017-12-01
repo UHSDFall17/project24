@@ -6,10 +6,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class AddList extends JFrame {
 
 	private JPanel contentPane;
@@ -107,7 +105,7 @@ public class AddList extends JFrame {
 					list_name = listname.getText();
 					try {
 						Controller c1 = new Controller();
-						ResultSet rs = c1.creatingList(bnme,list_name);
+						c1.creatingList(bnme,list_name);
 					} catch (Exception e1) {
 						e1.printStackTrace();
 					}

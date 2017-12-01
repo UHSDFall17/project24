@@ -11,7 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.SoftBevelBorder;
-import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -22,8 +21,6 @@ import java.sql.Statement;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
-
 public class Del extends JFrame {
 
 	private JPanel contentPane;
@@ -89,15 +86,7 @@ public class Del extends JFrame {
 		panel.add(teamBox);
 		
 		try {
-			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
-	        String dbName = "trello1";//databese name
-	        String driver = "com.mysql.cj.jdbc.Driver";
-	        String userName = "root";
-	        String Password = "trello";// password
-	        
-	        
-	        	Class.forName(driver).newInstance();
-	        	Connection conn = DriverManager.getConnection(url,userName,Password);
+			Connection conn = c1.EstCon();
 	            Statement statement = conn.createStatement();
 	            String query="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='"+username+"');";
 	            ResultSet rs=statement.executeQuery(query);
@@ -113,7 +102,7 @@ public class Del extends JFrame {
 		TeamDelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					c1.EstCon();
+					
 					Connection conn = c1.EstCon();
 			            Statement statement = conn.createStatement();
 			            Statement st = conn.createStatement();
@@ -162,7 +151,7 @@ public class Del extends JFrame {
 		
 		try {
 
-			c1.EstCon();
+		
 			Connection conn = c1.EstCon();
 	            Statement statement = conn.createStatement();
 	            String query="select BoardName from board where username='"+username+"';";
@@ -182,7 +171,7 @@ public class Del extends JFrame {
 
 				try {
 
-					c1.EstCon();
+					
 					Connection conn = c1.EstCon();
 			        	String pri = null;
 			        	Statement st = conn.createStatement();
@@ -225,7 +214,7 @@ public class Del extends JFrame {
 		
 		try {
 
-			c1.EstCon();
+			
 			Connection conn = c1.EstCon();
 	            Statement statement = conn.createStatement();
 	            String query="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='"+username+"');";
@@ -247,7 +236,7 @@ public class Del extends JFrame {
 					
 		try {
 
-			c1.EstCon();
+			
 			Connection conn = c1.EstCon();
 	        	String ttid = null;
 	        	Statement st = conn.createStatement();
@@ -282,9 +271,7 @@ public class Del extends JFrame {
 		btnRemove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-
-					c1.EstCon();
-					Connection conn = c1.EstCon();
+	Connection conn = c1.EstCon();
 			        	String pri = null;
 			        	Statement st = conn.createStatement();
 			        	String qu = "select privilege from member where mem_username='"+username+"' and team_id in( select team_id from team where team_name='"+tbox.getSelectedItem()+"');";
@@ -324,7 +311,7 @@ public class Del extends JFrame {
 		
 		try {
 
-			c1.EstCon();
+			
 			Connection conn = c1.EstCon();
 	        	String bname = null;
 	        	Statement st = conn.createStatement();
@@ -345,7 +332,7 @@ public class Del extends JFrame {
 
 				try {
 
-					c1.EstCon();
+					
 					Connection conn = c1.EstCon();
 			        	String pri = null;
 			        	Statement st = conn.createStatement();
