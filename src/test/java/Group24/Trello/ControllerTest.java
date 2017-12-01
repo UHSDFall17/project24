@@ -84,7 +84,7 @@ public class ControllerTest {
         
         Controller instance = new Controller();
         int expResult = -1;
-        int result = instance.SaveUserDetails(user);
+        int result = instance.saveUserDetails(user);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         
@@ -102,7 +102,7 @@ public class ControllerTest {
         user.setPwd("12345678");
         Controller instance = new Controller();
         int expResult = 1;
-        int result = instance.SaveUserCreds(user);
+        int result = instance.saveUserCreds(user);
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
 
@@ -130,25 +130,10 @@ public class ControllerTest {
     public void testCheckExistingTeam() {
         System.out.println("checkExistingTeam");
         String username = "jka";
-        ResultSet expResult = null;
+        
         Controller instance = new Controller();
         
-         try {
-
-            MysqlCon connection = new MysqlCon();
-
-            Connection conn = connection.EstCon();
-            Statement st = conn.createStatement();
-            String sql1;
-
-
-            sql1="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='jka');";
-            expResult = st.executeQuery(sql1); //where ps is Object of PreparedStatement
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-         
+        
         ResultSet result = instance.checkExistingTeam(username);
         assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
@@ -174,7 +159,7 @@ public class ControllerTest {
             bname[i] = result.getString("BoardName");
             i++;
         }
-        String[] b = {"Board","abc","abc","abc"};
+        String[] b = {"Board","board2"};
         Assert.assertArrayEquals(b, bname);
         // TODO review the generated test code and remove the default call to fail.
 
@@ -199,7 +184,7 @@ public class ControllerTest {
             tname[i] = result.getString("team_name");
             i++;
         }
-        String[] t = {"Team"};
+        String[] t = {"team1"};
         Assert.assertArrayEquals(t, tname);
     }
 
@@ -209,7 +194,7 @@ public class ControllerTest {
     @Test
     public void testDisplayingBoardsForTeam() throws SQLException {
         System.out.println("displayingBoardsForTeam");
-        String teamname1 = "Team";
+        String teamname1 = "team1";
         Controller instance = new Controller();
         ResultSet result = instance.displayingBoardsForTeam(teamname1);
         int i=0,l=0;
@@ -232,7 +217,7 @@ public class ControllerTest {
     @Test
     public void testDisplayingTeamMembers() throws SQLException {
         System.out.println("displayingTeamMembers");
-        String teamname1 = "Team";
+        String teamname1 = "team1";
         Controller instance = new Controller();
         ResultSet result = instance.displayingTeamMembers(teamname1);
         int i=0,l=0;
@@ -343,7 +328,7 @@ public class ControllerTest {
             tname[i] = result.getString("team_name");
             i++;
         }
-        String[] t1 = {"Team","abc"};
+        String[] t1 = {"team1","team2"};
         Assert.assertArrayEquals(t1, tname);
     }
 
@@ -353,7 +338,7 @@ public class ControllerTest {
     @Test
     public void testDisplayTeamcreds() throws SQLException {
         System.out.println("displayTeamcreds");
-        String teamname1 = "Team";
+        String teamname1 = "team1";
         Controller instance = new Controller();
         ResultSet result = instance.displayTeamcreds(teamname1);
         int i=0,l=0;
@@ -373,7 +358,7 @@ public class ControllerTest {
             i++;
         }
 
-        String[] t1 = {"Team","83","Team under Nikitha","PUBLIC"};
+        String[] t1 = {"team1","97","team for test","PUBLIC"};
         Assert.assertArrayEquals(t1, tname);
     }
 
@@ -499,7 +484,7 @@ public class ControllerTest {
             i++;
         }
 
-        String[] u1 = {"jka","jkab12","nikki123","songoku"};
+        String[] u1 = {"jka","jkab12"};
         Assert.assertArrayEquals(u1, uname);
     }
 

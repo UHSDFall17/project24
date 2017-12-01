@@ -10,57 +10,57 @@ import static org.junit.Assert.*;
 public class BoardTest {
     //privacy test
     @Test
-    public void Testinputoutput1(){
+    public void testinputoutput1(){
         Board b1= new Board();
         String input = "1";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        assertEquals("Public", b1.SetPrivacy());
+        assertEquals("Public", b1.setPrivacy());
     }
 
     //privacy test
     @Test
-    public void Testinputoutput2(){
+    public void testinputoutput2(){
         Board b1= new Board();
         String input = "2";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        assertEquals("Team", b1.SetPrivacy());
+        assertEquals("Team", b1.setPrivacy());
     }
 
     //privacy test
     @Test
-    public void Testinputoutput3(){
+    public void testinputoutput3(){
         Board b1= new Board();
         String input = "3";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        assertEquals("Private", b1.SetPrivacy());
+        assertEquals("Private", b1.setPrivacy());
     }
 
     //privacy test
     @Test
-    public void Testinputoutput4(){
+    public void testinputoutput4(){
         Board b1= new Board();
         String input = "4";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        assertEquals("NULL", b1.SetPrivacy());
+        assertEquals("NULL", b1.setPrivacy());
     }
 
     //Title test
     @Test
-    public void Testinputoutput12(){
+    public void testinputoutput12(){
         Board b1= new Board();
         String input = "Group24";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        assertEquals("Group24", b1.CreateBoardTitle());
+        assertEquals("Group24", b1.createBoardTitle());
     }
 
     @Test
@@ -76,20 +76,20 @@ public class BoardTest {
         b1.setBoardName(Bname);
         b1.setBoardID(bid);
         b1.setUsername(username);
-
-        if(b1.getBoardName().compareTo(username)==0) {
+        boolean i=false;
+        if(b1.getBoardName().compareTo(Bname)==0) {
             if (b1.getPrivacy().compareTo(Privacy) == 0) {
                 if (b1.getPrivilege().compareTo(Privilege) == 0) {
                     if (b1.getUsername().compareTo(username) == 0) {
                         if (b1.getBoardID() == (bid)){
-                            assertTrue(true);
-                            return;
+                        	i=true;
+                        	
                         }
                     }
                 }
             }
         }
-    }
-
+    
+    assertTrue(i);}
 
 }

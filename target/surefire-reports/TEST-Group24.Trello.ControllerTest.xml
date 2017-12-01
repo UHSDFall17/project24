@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="Group24.Trello.PhoneNumberTest" time="0" errors="0" skipped="0">
+<testsuite tests="17" failures="0" name="Group24.Trello.ControllerTest" time="7.511" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
@@ -61,7 +61,21 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Group24.Trello.PhoneNumberTest" name="phNolengthpass" time="0"/>
-  <testcase classname="Group24.Trello.PhoneNumberTest" name="phNolengthfail1" time="0"/>
-  <testcase classname="Group24.Trello.PhoneNumberTest" name="phNolengthfail2" time="0"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testSaveUserDetails" time="0.823"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testCheckForExistingUser" time="0.565"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testDisplayingTeamMembers" time="0.348"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testCheckTeamHasBoard" time="0.328"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testUpdateBoardTeam" time="0.782"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testListMyTeam" time="0.4"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testListAllUsers" time="0.378"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testCheckExistingTeam" time="0.353"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testSaveUserCreds" time="0.347"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testCheckForUser" time="0.338"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testDisplayTeamcreds" time="0.366"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testDisplayCardDescription" time="0.35"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testFetchingBoardDetails" time="0.347"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testAddMemberToTeam" time="0.771"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testDisplayingBoardsForTeam" time="0.352"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testCheckExistingBoard" time="0.332"/>
+  <testcase classname="Group24.Trello.ControllerTest" name="testDisplayListsInBoard" time="0.331"/>
 </testsuite>

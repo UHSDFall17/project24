@@ -7,21 +7,21 @@ import org.junit.Test;
 public class PasswordTest {
 
 	@Test
-	public void TestPasswordfail1() {
+	public void testPasswordfail1() {
 		User u = new User();
-		boolean i = u.CheckPassword(new char[]{'D', 'A', 'R', 'T', 'H', 'V', 'A', 'D', 'E', 'R'});
+		boolean i = u.checkPassword(new char[]{'D', 'A', 'R', 'T', 'H', 'V', 'A', 'D', 'E', 'R'});
 		assertEquals(true, i);
 	}
 	@Test
-	public void TestPasswordfail2() {
+	public void testPasswordfail2() {
 		User u = new User();
-		boolean i = u.CheckPassword(new char[]{'D', 'A', 'R', 'T', 'H'});
+		boolean i = u.checkPassword(new char[]{'D', 'A', 'R', 'T', 'H'});
 		assertEquals(true, i);
 	}
 	@Test
-	public void TestPasswordRight() {
+	public void testPasswordRight() {
 		User u = new User();
-		boolean i = u.CheckPassword(new char[]{'T', 'E', 'C', 'H', 'I','E','S','1'});
+		boolean i = u.checkPassword(new char[]{'T', 'E', 'C', 'H', 'I','E','S','1'});
 		assertEquals(false, i);
 	}
 
