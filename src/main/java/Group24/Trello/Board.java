@@ -48,7 +48,7 @@ public class Board {
 
 		return S1;
 	}
-	public String CreateBoardTitle() {
+	public String createBoardTitle() {
 		System.out.println("Enter your Board Title:");
 		String tempS1 = enterString();
 		setBoardName(tempS1);
@@ -62,7 +62,7 @@ public class Board {
 		return key1;
 	}
 
-	public String SetPrivacy() {
+	public String setPrivacy() {
 		System.out.println("Choose the privacy settings:");
 		System.out.println("1. Public:");
 		System.out.println("2. Team:");

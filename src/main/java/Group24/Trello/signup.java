@@ -171,8 +171,8 @@ public class signup extends JFrame {
 								JOptionPane.showMessageDialog(null, "User name already exist" );
 								return;
 							}
-							c1.SaveUserDetails(user);
-							c1.SaveUserCreds(user);
+							c1.saveUserDetails(user);
+							c1.saveUserCreds(user);
 
 
 

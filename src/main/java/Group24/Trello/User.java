@@ -68,7 +68,7 @@ public class User {
 
 	}
 
-	public boolean CheckPassword(char[] pwd){
+	public boolean checkPassword(char[] pwd){
 		boolean i = true;
 		if(pwd.length > 8 || pwd.length<8) {
 			System.out.println("Password should be of 8 characters");
