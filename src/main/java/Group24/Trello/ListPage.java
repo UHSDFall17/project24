@@ -70,7 +70,7 @@ public class ListPage extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				Homepage hmp = new Homepage();
-				hmp.setVisible(true);
+				hmp.setVisible(true);	
 			}
 		});
 		home.setBounds(19, 47, 115, 75);
@@ -145,40 +145,46 @@ public class ListPage extends JFrame {
 
 
 		try {
+			String des = null; 
 			Controller c1 = new Controller();
-			ResultSet rs = c1.displayCardDescription(lnme);
-			while (rs.next()) {
-				des = rs.getString("description");
-			}
-		listModel.addElement(des);
+			ResultSet rs1 = c1.displayCardDescription(lnme);
+			while (rs1.next()) {
+				des = rs1.getString("description");		
+				listModel.addElement(des);		            	
+			}	
+			//  System.out.println(rs.getString("description"));
 
-	}catch(Exception e) {
-		e.printStackTrace();
-	}
-	JButton button = new JButton("GO");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}	
+		JButton button = new JButton("GO");
 		button.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			Login.card = list.getSelectedValue().toString();
-			dispose();
-			ViewCard vcrd = new ViewCard();
-			vcrd.setVisible(true);
-		}
-	});
+			public void actionPerformed(ActionEvent e) {
+				if(list.getSelectedValue()!=null){
+					Login.card = list.getSelectedValue().toString();
+					dispose();
+					ViewCard vcrd = new ViewCard();
+					vcrd.setVisible(true);
+				}
+				else return;
+			}
+		});
 		button.setBounds(732, 336, 95, 49);
 		panel.add(button);
 
-	JButton btnModifyOrComment = new JButton("Modify or Comment \r\nexisting card");
+		JButton btnModifyOrComment = new JButton("Modify or Comment existing card");
 		btnModifyOrComment.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			dispose();
-			ViewCard crd = new ViewCard();
-			crd.setVisible(true);
-		}
-	});
+			public void actionPerformed(ActionEvent e) {
+				Login.card= list.getSelectedValue().toString();
+				dispose();
+				ViewCard crd = new ViewCard();
+				crd.setVisible(true);
+			}
+		});
 		btnModifyOrComment.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		btnModifyOrComment.setBackground(new Color(50, 205, 50));
 		btnModifyOrComment.setBounds(19, 370, 311, 103);
 		panel.add(btnModifyOrComment);
 
-}
+	}
 }

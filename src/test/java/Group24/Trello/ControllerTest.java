@@ -21,6 +21,7 @@ import Group24.Trello.Homepage;
 import Group24.Trello.MysqlCon;
 import Group24.Trello.*;
 import com.mysql.cj.api.mysqla.result.Resultset;
+import java.util.ArrayList;
 
 /**
  *
@@ -68,11 +69,12 @@ public class ControllerTest {
     /**
      * Test of SaveUserDetails method, of class Controller.
      */
+    //everytime to test this function, the Username needs to be changed
     @Test
     public void testSaveUserDetails() {
         System.out.println("SaveUserDetails");
         User user = new User();
-        user.setUsername("jka");
+        user.setUsername("jkab12");
         user.setFname("cui");   
         user.setLname("v");
         user.setPwd("12345678");
@@ -172,7 +174,7 @@ public class ControllerTest {
             bname[i] = result.getString("BoardName");
             i++;
         }
-        String[] b = {"jka","nav","board1234"};
+        String[] b = {"Board"};
         Assert.assertArrayEquals(b, bname);
         // TODO review the generated test code and remove the default call to fail.
 
@@ -184,7 +186,7 @@ public class ControllerTest {
     @Test
     public void testFetchingBoardDetails() throws SQLException {
         System.out.println("fetchingBoardDetails");
-        String BoardName1 = "jka";
+        String BoardName1 = "Board";
         Controller instance = new Controller();
         ResultSet result = instance.fetchingBoardDetails(BoardName1);
         int i=0,l=0;
@@ -197,7 +199,7 @@ public class ControllerTest {
             tname[i] = result.getString("team_name");
             i++;
         }
-        String[] t = {"team1"};
+        String[] t = {"Team"};
         Assert.assertArrayEquals(t, tname);
     }
 
@@ -207,7 +209,7 @@ public class ControllerTest {
     @Test
     public void testDisplayingBoardsForTeam() throws SQLException {
         System.out.println("displayingBoardsForTeam");
-        String teamname1 = "team1";
+        String teamname1 = "Team";
         Controller instance = new Controller();
         ResultSet result = instance.displayingBoardsForTeam(teamname1);
         int i=0,l=0;
@@ -220,7 +222,7 @@ public class ControllerTest {
             bname[i] = result.getString("BoardName");
             i++;
         }
-        String[] b = {"jka"};
+        String[] b = {"Board"};
         Assert.assertArrayEquals(b, bname);
     }
 
@@ -230,7 +232,7 @@ public class ControllerTest {
     @Test
     public void testDisplayingTeamMembers() throws SQLException {
         System.out.println("displayingTeamMembers");
-        String teamname1 = "team1";
+        String teamname1 = "Team";
         Controller instance = new Controller();
         ResultSet result = instance.displayingTeamMembers(teamname1);
         int i=0,l=0;
@@ -243,7 +245,7 @@ public class ControllerTest {
             bname[i] = result.getString("mem_username");
             i++;
         }
-        String[] b = {"jka","nik123","jka123"};
+        String[] b = {"jka"};
         Assert.assertArrayEquals(b, bname);
     }
 
@@ -253,7 +255,7 @@ public class ControllerTest {
     @Test
     public void testDisplayListsInBoard() throws SQLException {
         System.out.println("displayListsInBoard");
-        String bname = "jka";
+        String bname = "Board";
         Controller instance = new Controller();
         ResultSet result = instance.displayListsInBoard(bname);
         int i=0,l=0;
@@ -266,7 +268,7 @@ public class ControllerTest {
             lname[i] = result.getString("list_name");
             i++;
         }
-        String[] l1 = {"list1","list2"};
+        String[] l1 = {"list"};
         Assert.assertArrayEquals(l1, lname);
     }
 
@@ -289,11 +291,35 @@ public class ControllerTest {
     @Test
     public void testCreateBoard() {
         System.out.println("createBoard");
-        Board board = null;
+        String usernameexp = "jka";
+        ResultSet rs = null; 
+        String rss = null;
+        Board board = new Board();
+        board.setUsername("jka");
+        board.setPrivacy("private");
+        board.setPrivilege("ADMIN");
+        board.setBoardName("abc");
         Controller instance = new Controller();
         instance.createBoard(board);
+        
+         try {
+
+            MysqlCon connection = new MysqlCon();
+
+            Connection conn = connection.EstCon();
+            Statement st = conn.createStatement();
+            rs = st.executeQuery("select username from board where boardname = 'abc'");
+            while(rs.next()){
+                rss = rs.getString(1);
+                //System.out.println(rss);
+            }
+            
+            conn.close(); 
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Assert.assertEquals(usernameexp, rss);
     }
 
     /**
@@ -315,7 +341,7 @@ public class ControllerTest {
             tname[i] = result.getString("team_name");
             i++;
         }
-        String[] t1 = {"team1","team2"};
+        String[] t1 = {"Team","abc"};
         Assert.assertArrayEquals(t1, tname);
     }
 
@@ -325,21 +351,27 @@ public class ControllerTest {
     @Test
     public void testDisplayTeamcreds() throws SQLException {
         System.out.println("displayTeamcreds");
-        String teamname1 = "team1";
+        String teamname1 = "Team";
         Controller instance = new Controller();
         ResultSet result = instance.displayTeamcreds(teamname1);
         int i=0,l=0;
         if (result.last()) {
-            l = result.getRow();
+            l = (result.getRow())*4;
             result.beforeFirst(); // not rs.first() because the rs.next() below will move on, missing the first element
         }
         String[] tname=new String[l];
         while (result.next()) {
             tname[i] = result.getString("team_name");
             i++;
+            tname[i] = result.getString("team_id");
+            i++;
+            tname[i] = result.getString("team_description");
+            i++;
+            tname[i] = result.getString("team_visibility");
+            i++;
         }
 
-        String[] t1 = {"team1"};
+        String[] t1 = {"Team","83","Team under Nikitha","PUBLIC"};
         Assert.assertArrayEquals(t1, tname);
     }
 
@@ -350,12 +382,52 @@ public class ControllerTest {
     @Test
     public void testCreateTeam() {
         System.out.println("createTeam");
-        Team_cre team1 = null;
-        String username = "";
+        ResultSet rs2 = null; 
+        String teamnameexp = "abc";
+        String username = "jka";
+        String teamname = null;
+        int tid = 0;
+        
+        Team_cre team1 = new Team_cre();
+        team1.setTeam_name("abc");
+        team1.setTeam_description("abc");
+        List<String> team_members = new ArrayList<>();
+        team_members.add("jka");
+        team1.setTeam_members(team_members);
+        team1.setTeam_visibility("PUBLIC");
+        
+        
+        
         Controller instance = new Controller();
         instance.createTeam(team1, username);
+         try {
+
+            MysqlCon connection = new MysqlCon();
+
+            Connection conn = connection.EstCon();
+            Statement st = conn.createStatement();
+            
+            String sql2 = "SELECT team_id FROM team where team_name = '" + team1.getTeam_name() +"';";
+            ResultSet rs = st.executeQuery(sql2);
+            while(rs.next()){
+                tid = rs.getInt("team_id");
+                System.out.println(tid);
+            }
+                String sql3= "select team_name from team where team_id =" +tid ;
+                rs2 = st.executeQuery(sql3);
+            while(rs2.next()){
+                teamname = rs2.getString(1);
+                System.out.println(teamname);
+            }
+
+            conn.close(); 
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        Assert.assertEquals(teamnameexp, teamname);
+        
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -381,12 +453,28 @@ public class ControllerTest {
     @Test
     public void testUpdateBoardTeam() {
         System.out.println("updateBoardTeam");
-        String boardname = "";
-        String teamname = "";
+        String boardname = "jka";
+        String teamname = "team1";
+        ResultSet rs = null; 
         Controller instance = new Controller();
         instance.updateBoardTeam(boardname, teamname);
+        
+        try {
+
+            MysqlCon connection = new MysqlCon();
+
+            Connection conn = connection.EstCon();
+            Statement st = conn.createStatement();
+            String query = "select * from board_team where board_id = 16 and team_id = 61";
+            rs = st.executeQuery(query);
+            
+            conn.close(); 
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        Assert.assertNotNull(rs);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -408,7 +496,7 @@ public class ControllerTest {
             i++;
         }
 
-        String[] u1 = {"jka","jka123","nik123","qwerty"};
+        String[] u1 = {"jka","jkab12","nikki123"};
         Assert.assertArrayEquals(u1, uname);
     }
 
@@ -418,13 +506,35 @@ public class ControllerTest {
     @Test
     public void testAddMemberToTeam() {
         System.out.println("addMemberToTeam");
-        String team_name = "";
-        String privilege = "";
-        String mem_username = "";
+        String team_name = "abc";
+        String privilege = "ADMIN";
+        String mem_username = "jka";
+        int tid = 0; 
+        ResultSet rs = null;
         Controller instance = new Controller();
         instance.addMemberToTeam(team_name, privilege, mem_username);
+        
+        try {
+
+            MysqlCon connection = new MysqlCon();
+
+            Connection conn = connection.EstCon();
+            Statement st = conn.createStatement();
+            String sql1 ="SELECT team_id FROM team where team_name = '" + team_name +"';";
+            ResultSet rs1=st.executeQuery(sql1);
+            if(rs1.next()) {
+               tid = rs1.getInt("team_id");
+            }
+            String query2 = "select member_id from member where team_id = "+tid+" and mem_username ='" +mem_username+"'";
+            rs = st.executeQuery(query2);
+            
+            conn.close(); 
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        Assert.assertNotNull(rs);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -433,7 +543,7 @@ public class ControllerTest {
     @Test
     public void testDisplayCardDescription() throws SQLException {
         System.out.println("displayCardDescription");
-        String lnme = "list1";
+        String lnme = "list";
         Controller instance = new Controller();
         ResultSet result = instance.displayCardDescription(lnme);
         int i=0,l=0;
@@ -446,7 +556,7 @@ public class ControllerTest {
             cardname[i] = result.getString("description");
             i++;
         }
-        String[] d1 = {"card 3","card1"};
+        String[] d1 = {"abc-new","xyz"};
         Assert.assertArrayEquals(d1, cardname);
     }
     

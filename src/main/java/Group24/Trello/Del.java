@@ -27,6 +27,7 @@ import javax.swing.DefaultComboBoxModel;
 public class Del extends JFrame {
 
 	private JPanel contentPane;
+	MysqlCon c1 = new MysqlCon();
 
 	/**
 	 * Launch the application.
@@ -88,8 +89,15 @@ public class Del extends JFrame {
 		panel.add(teamBox);
 		
 		try {
-			MysqlCon connection = new MysqlCon();
-			Connection conn = connection.EstCon();
+			String url = "jdbc:mysql://35.192.76.117:3306/trello1?useSSL=false";// url
+	        String dbName = "trello1";//databese name
+	        String driver = "com.mysql.cj.jdbc.Driver";
+	        String userName = "root";
+	        String Password = "trello";// password
+	        
+	        
+	        	Class.forName(driver).newInstance();
+	        	Connection conn = DriverManager.getConnection(url,userName,Password);
 	            Statement statement = conn.createStatement();
 	            String query="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='"+username+"');";
 	            ResultSet rs=statement.executeQuery(query);
@@ -97,7 +105,6 @@ public class Del extends JFrame {
 	            	String tname = rs.getString("team_name");
 	            	teamBox.addItem(tname);
 	            	}
-	            	conn.close();
 		}catch(Exception e) {
         	e.printStackTrace();
         }
@@ -106,12 +113,20 @@ public class Del extends JFrame {
 		TeamDelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					MysqlCon connection = new MysqlCon();
-					Connection conn = connection.EstCon();
+					c1.EstCon();
+					Connection conn = c1.EstCon();
 			            Statement statement = conn.createStatement();
 			            Statement st = conn.createStatement();
 			            Statement st1 = conn.createStatement();
 			            Statement st2 = conn.createStatement();
+			        	String pri = null;
+			        	Statement st4 = conn.createStatement();
+			        	String qu = "select privilege from member where mem_username='"+username+"' and team_id in( select team_id from team where team_name='"+teamBox.getSelectedItem()+"');";
+			        	ResultSet res = st4.executeQuery(qu);
+			        	while (res.next()) {
+			        		pri = res.getString("privilege");			        		
+			        	}
+			        	if (pri.equals("ADMIN")) {
 			            String query="SELECT team_id FROM team where team_name = '" +teamBox.getSelectedItem()+"';";
 			            ResultSet rs=statement.executeQuery(query);
 			            while (rs.next()) {
@@ -120,11 +135,13 @@ public class Del extends JFrame {
 			            	st1.executeUpdate("delete from board_team where team_id= '" +tname+"';");
 			            	}
 			            st2.executeUpdate("delete from team where team_name= '" +teamBox.getSelectedItem()+"';");
-			            conn.close();
+			            JOptionPane.showMessageDialog(null, "TEAM DELETED !!!");}
+			        	else {
+			        		JOptionPane.showMessageDialog(null, "Only Admin can delete the team !!!");
+			        	}
 				}catch(Exception e1) {
 		        	e1.printStackTrace();
 		        }
-				JOptionPane.showMessageDialog(null, "TEAM DELETED !!!");
 				dispose();
 				Homepage hmp = new Homepage();
 				hmp.setVisible(true);
@@ -144,16 +161,16 @@ public class Del extends JFrame {
 		panel.add(boardBox);
 		
 		try {
-			MysqlCon connection = new MysqlCon();
-			Connection conn = connection.EstCon();
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
 	            Statement statement = conn.createStatement();
-	            String query="select BoardName from board where username='"+username+"');";
+	            String query="select BoardName from board where username='"+username+"';";
 	            ResultSet rs=statement.executeQuery(query);
 	            while (rs.next()) {
 	            	String bname = rs.getString("BoardName");
 	            	boardBox.addItem(bname);
 	            	}
-	            	conn.close();
 		}catch(Exception e) {
         	e.printStackTrace();
         }
@@ -162,61 +179,201 @@ public class Del extends JFrame {
 		JButton button = new JButton("DELETE");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				try {
-					MysqlCon connection = new MysqlCon();
-					Connection conn = connection.EstCon();
+
+					c1.EstCon();
+					Connection conn = c1.EstCon();
+			        	String pri = null;
+			        	Statement st = conn.createStatement();
+			        	String qu = "select privilege from board where username='"+username+"' and BoardName='"+boardBox.getSelectedItem()+"';";
+			        	ResultSet res = st.executeQuery(qu);
+			        	while (res.next()) {
+			        		pri = res.getString("privilege");			        		
+			        	}
+			        	if (pri.equals("ADMIN")) {
 			            Statement statement = conn.createStatement();
-			            Statement st = conn.createStatement();
-			            Statement st1 = conn.createStatement();
-			            Statement st2 = conn.createStatement();
-			            String query="SELECT BoardID FROM board where BoardName = '" +boardBox.getSelectedItem()+"';";
-			            ResultSet rs=statement.executeQuery(query);
-			            while (rs.next()) {
-			            	String bname = rs.getString("BoardID");
-			            	st1.executeUpdate("delete from board_team where BoardID= '" +bname+"';");
-			            	}
-			            st2.executeUpdate("delete from board where BoardName= '" +boardBox.getSelectedItem()+"';");
-			            conn.close();
+			            statement.executeUpdate("delete from board where BoardName='"+boardBox.getSelectedItem()+"' and username='"+username+"';") ;
+			            JOptionPane.showMessageDialog(null, "REMOVED !!!");
+			            }	else {
+			            	JOptionPane.showMessageDialog(null, "Only Admin can delete Board !!!");
+			            }        	
+			       
 				}catch(Exception e1) {
 		        	e1.printStackTrace();
 		        }
-				JOptionPane.showMessageDialog(null, "BOARD DELETED !!!");
+			
 				dispose();
 				Homepage hmp = new Homepage();
-				hmp.setVisible(true);				
+				hmp.setVisible(true);
+			
+				
 			}
 		});
 		button.setBounds(613, 220, 115, 35);
 		panel.add(button);
 		
-		JLabel lblRemoveMember = new JLabel("REMOVE MEMBER FROM TEAM:");
+		JLabel lblRemoveMember = new JLabel("SELECT TEAM:");
 		lblRemoveMember.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-		lblRemoveMember.setBounds(115, 322, 282, 20);
+		lblRemoveMember.setBounds(19, 315, 146, 20);
 		panel.add(lblRemoveMember);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		comboBox_1.setBounds(110, 358, 162, 35);
-		panel.add(comboBox_1);
+		JComboBox tbox = new JComboBox();
+		tbox.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tbox.setBounds(166, 308, 162, 35);
+		panel.add(tbox);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setFont(new Font("Tahoma", Font.BOLD, 18));
-		comboBox_2.setBounds(418, 358, 162, 35);
-		panel.add(comboBox_2);
+		try {
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
+	            Statement statement = conn.createStatement();
+	            String query="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='"+username+"');";
+	            ResultSet rs=statement.executeQuery(query);
+	            String tname = null;
+	            while (rs.next()) {
+	            	tname = rs.getString("team_name");
+	            	tbox.addItem(tname);
+	            	           }	        		       
+		}catch(Exception e) {
+        	e.printStackTrace();
+        }	
+
 		
-		JLabel lblTeam = new JLabel("TEAM:");
-		lblTeam.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-		lblTeam.setBounds(28, 366, 60, 20);
-		panel.add(lblTeam);
+		JComboBox mbox = new JComboBox();
+		mbox.setFont(new Font("Tahoma", Font.BOLD, 18));
+		mbox.setBounds(349, 387, 162, 35);
+		panel.add(mbox);
+					
+		try {
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
+	        	String ttid = null;
+	        	Statement st = conn.createStatement();
+	        	String qu = "select team_id from team where team_name = '"+tbox.getSelectedItem()+"';";
+	        	ResultSet res = st.executeQuery(qu);
+	        	while (res.next()) {
+	        		ttid = res.getString("team_id");
+	        	}
+	            Statement statement = conn.createStatement();
+	            String query= "SELECT mem_username from member where team_id = '"+ttid+"';";
+	            ResultSet rs=statement.executeQuery(query);
+	            String ame = null;
+	            while (rs.next()) {
+	            	ame = rs.getString("mem_username");
+	            	mbox.addItem(ame);
+	            	           }	        	
+	       
+		}catch(Exception e1) {
+        	e1.printStackTrace();
+        }
+	
 		
-		JLabel lblMember = new JLabel("MEMBER:");
+		
+		
+		JLabel lblMember = new JLabel("SELECT MEMBER:");
 		lblMember.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-		lblMember.setBounds(317, 365, 86, 20);
+		lblMember.setBounds(166, 394, 154, 20);
 		panel.add(lblMember);
+	
 		
 		JButton btnRemove = new JButton("REMOVE");
-		btnRemove.setBounds(649, 359, 115, 35);
-		panel.add(btnRemove);
-	}
+		btnRemove.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
 
+					c1.EstCon();
+					Connection conn = c1.EstCon();
+			        	String pri = null;
+			        	Statement st = conn.createStatement();
+			        	String qu = "select privilege from member where mem_username='"+username+"' and team_id in( select team_id from team where team_name='"+tbox.getSelectedItem()+"');";
+			        	ResultSet res = st.executeQuery(qu);
+			        	while (res.next()) {
+			        		pri = res.getString("privilege");			        		
+			        	}
+			        	if (pri.equals("ADMIN")) {
+			            Statement statement = conn.createStatement();
+			            statement.executeUpdate("delete from member where team_id in( select team_id from team where team_name='"+tbox.getSelectedItem()+"') and  mem_username='"+mbox.getSelectedItem()+"';") ;
+			            JOptionPane.showMessageDialog(null, "REMOVED !!!");
+			            }	else {
+			            	JOptionPane.showMessageDialog(null, "Only Admin can delete member !!!");
+			            }        	
+			       
+				}catch(Exception e1) {
+		        	e1.printStackTrace();
+		        }
+			
+				dispose();
+				Homepage hmp = new Homepage();
+				hmp.setVisible(true);
+			}
+		});
+		btnRemove.setBounds(597, 388, 115, 35);
+		panel.add(btnRemove);
+		
+		JLabel lblSelectBoard = new JLabel("SELECT BOARD:");
+		lblSelectBoard.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		lblSelectBoard.setBounds(181, 484, 139, 20);
+		panel.add(lblSelectBoard);
+		
+		JComboBox bBox = new JComboBox();
+		bBox.setFont(new Font("Tahoma", Font.BOLD, 18));
+		bBox.setBounds(349, 471, 162, 35);
+		panel.add(bBox);
+		
+		try {
+
+			c1.EstCon();
+			Connection conn = c1.EstCon();
+	        	String bname = null;
+	        	Statement st = conn.createStatement();
+	        	String qu = "select BoardName from board where BoardID in (select board_id from board_team where team_id in (select team_id from team where team_name='"+tbox.getSelectedItem()+"'));";
+	        	ResultSet res = st.executeQuery(qu);
+	        	while (res.next()) {
+	        		bname = res.getString("BoardName");	        	
+	            	bBox.addItem(bname);
+	            	           }	        	
+	       
+		}catch(Exception e1) {
+        	e1.printStackTrace();
+        }
+		
+		JButton button_1 = new JButton("REMOVE");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				try {
+
+					c1.EstCon();
+					Connection conn = c1.EstCon();
+			        	String pri = null;
+			        	Statement st = conn.createStatement();
+			        	String qu = "select privilege from board where username='"+username+"' and BoardName='"+bBox.getSelectedItem()+"';";
+			        	ResultSet res = st.executeQuery(qu);
+			        	while (res.next()) {
+			        		pri = res.getString("privilege");			        		
+			        	}
+			        	if (pri.equals("ADMIN")) {
+			            Statement statement = conn.createStatement();
+			            statement.executeUpdate("delete from board_team where board_id in (select BoardID from board where BoardName='"+bBox.getSelectedItem()+"') and team_id in (select team_id from team where team_name='"+tbox.getSelectedItem()+"');") ;
+			            JOptionPane.showMessageDialog(null, "REMOVED !!!");
+			            }	else {
+			            	JOptionPane.showMessageDialog(null, "Only Admin can delete Board !!!");
+			            }        	
+			       
+				}catch(Exception e1) {
+		        	e1.printStackTrace();
+		        }
+			
+				
+				dispose();
+				Homepage hmp = new Homepage();
+				hmp.setVisible(true);
+				
+			}
+		});
+		button_1.setBounds(597, 475, 115, 35);
+		panel.add(button_1);
+	}
 }
