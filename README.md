@@ -3,7 +3,9 @@
 #Project Group 24
 
 
-This is the Repository for the project assigned to Group24
+This is the Repository for the project assigned to Group24.
+
+
 Login.java is our main file. (To experience the app built run from Login.java)
 
 
