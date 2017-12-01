@@ -1,7 +1,7 @@
 package Group24.Trello;
 
 import java.sql.*;
-import java.util.List;
+
 
 public class Controller {
 
@@ -36,11 +36,11 @@ public class Controller {
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			String sql1, sql2;
+			String sql1;
 			String username = user.getUsername();
 			String fname = user.getFname();
 			String lname = user.getLname();
-			String pwd = user.getPwd();
+			
 			String company = user.getCompany();
 			String emailID = user.getEmailID();
 			long phnum = user.getPhnum();
@@ -69,7 +69,7 @@ public class Controller {
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			String sql1, sql2;
+			String sql1;
 			String username = user.getUsername();
 			String pwd = user.getPwd();
 			sql1 = "INSERT INTO usercreds(username,pwd)"
@@ -282,8 +282,7 @@ public class Controller {
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			Statement st = conn.createStatement();
-
+			
 			String sql1;
 			String username = board.getUsername();
 			String privacy = board.getPrivacy();
@@ -355,7 +354,7 @@ public class Controller {
 			String sql1, sql2, sql3;
 			String team_name = team1.getTeam_name();
 			String team_description = team1.getTeam_description();
-			List<String> team_members = team1.getTeam_members();
+			
 			String team_visibility = "PUBLIC";
 
 			sql1 = "INSERT INTO team(team_id,team_name,team_description,team_visibility)"
@@ -699,8 +698,7 @@ public class Controller {
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			Statement st = conn.createStatement();
-			String sql1;
+			
 			Statement st2 = conn.createStatement();
 			String qu2 = "select team_id from team where team_name = '" + tname + "';";
 			res2 = st2.executeQuery(qu2);
@@ -785,8 +783,7 @@ public class Controller {
 	public int modifyDueDateDesc(String tname, String cname, String memuname, String ddt, String desc) {
 		int res4= -1;
 		String lid=null;
-		String mid=null;
-		String tid=null;
+		
 		try {
 
 			MysqlCon connection = new MysqlCon();
@@ -799,18 +796,7 @@ public class Controller {
 			while (res.next()) {
 				lid = res.getString("card_id");
 			}
-			Statement st3 = conn.createStatement();
-			String qu3 = "select team_id from team where team_name = '"+tname+"';";
-			ResultSet res3 = st3.executeQuery(qu3);
-			while (res3.next()) {
-				tid = res3.getString("team_id");
-			}
-			Statement st2 = conn.createStatement();
-			String qu2 = "select member_id from member where mem_username = '"+memuname+"' and team_id = '"+tid+"';";
-			ResultSet res2 = st2.executeQuery(qu2);
-			while (res2.next()) {
-				mid = res2.getString("member_id");
-			}
+			
 			res4 = st1.executeUpdate("update card set due_date = '" + ddt + "',description = '" + desc + "' where card_id = '" + lid + "';");
 		} catch (Exception e) {
 			e.printStackTrace();
