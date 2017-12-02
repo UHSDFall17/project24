@@ -29,7 +29,7 @@ public class Controller {
 		return result;
 	}
 
-	public int SaveUserDetails(User user) {
+	public int saveUserDetails(User user) {
 		int result1 = -1;
 		try {
 
@@ -62,7 +62,7 @@ public class Controller {
 		return result1;
 	}
 
-	public int SaveUserCreds(User user) {
+	public int saveUserCreds(User user) {
 		int result1 = -1;
 		try {
 
