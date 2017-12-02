@@ -1,7 +1,7 @@
 package Group24.Trello;
 
 import java.sql.*;
-
+import java.util.List;
 
 public class Controller {
 
@@ -40,7 +40,7 @@ public class Controller {
 			String username = user.getUsername();
 			String fname = user.getFname();
 			String lname = user.getLname();
-			
+			String pwd = user.getPwd();
 			String company = user.getCompany();
 			String emailID = user.getEmailID();
 			long phnum = user.getPhnum();
@@ -785,7 +785,8 @@ public class Controller {
 	public int modifyDueDateDesc(String tname, String cname, String memuname, String ddt, String desc) {
 		int res4= -1;
 		String lid=null;
-		
+		String mid=null;
+		String tid=null;
 		try {
 
 			MysqlCon connection = new MysqlCon();
@@ -798,7 +799,18 @@ public class Controller {
 			while (res.next()) {
 				lid = res.getString("card_id");
 			}
-			
+			Statement st3 = conn.createStatement();
+			String qu3 = "select team_id from team where team_name = '"+tname+"';";
+			ResultSet res3 = st3.executeQuery(qu3);
+			while (res3.next()) {
+				tid = res3.getString("team_id");
+			}
+			Statement st2 = conn.createStatement();
+			String qu2 = "select member_id from member where mem_username = '"+memuname+"' and team_id = '"+tid+"';";
+			ResultSet res2 = st2.executeQuery(qu2);
+			while (res2.next()) {
+				mid = res2.getString("member_id");
+			}
 			res4 = st1.executeUpdate("update card set due_date = '" + ddt + "',description = '" + desc + "' where card_id = '" + lid + "';");
 		} catch (Exception e) {
 			e.printStackTrace();
