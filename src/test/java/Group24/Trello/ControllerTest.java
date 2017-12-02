@@ -84,7 +84,7 @@ public class ControllerTest {
         
         Controller instance = new Controller();
         int expResult = -1;
-        int result = instance.saveUserDetails(user);
+        int result = instance.SaveUserDetails(user);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         
@@ -102,7 +102,7 @@ public class ControllerTest {
         user.setPwd("12345678");
         Controller instance = new Controller();
         int expResult = 1;
-        int result = instance.saveUserCreds(user);
+        int result = instance.SaveUserCreds(user);
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
 
@@ -132,8 +132,25 @@ public class ControllerTest {
         String username = "jka";
         
         Controller instance = new Controller();
+        ResultSet expResult = null;
         
         
+         try {
+
+            MysqlCon connection = new MysqlCon();
+
+            Connection conn = connection.EstCon();
+            Statement st = conn.createStatement();
+            String sql1;
+
+
+            sql1="select team.team_name from team where team.team_id IN (select member.team_id from member where member.mem_username='jka');";
+            expResult = st.executeQuery(sql1); //where ps is Object of PreparedStatement
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+         
         ResultSet result = instance.checkExistingTeam(username);
         assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
@@ -300,8 +317,8 @@ public class ControllerTest {
                 rss = rs.getString(1);
                 //System.out.println(rss);
             }
-            
-            conn.close(); 
+
+            conn.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

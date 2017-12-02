@@ -29,14 +29,14 @@ public class Controller {
 		return result;
 	}
 
-	public int saveUserDetails(User user) {
+	public int SaveUserDetails(User user) {
 		int result1 = -1;
 		try {
 
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			String sql1;
+			String sql1, sql2;
 			String username = user.getUsername();
 			String fname = user.getFname();
 			String lname = user.getLname();
@@ -62,14 +62,14 @@ public class Controller {
 		return result1;
 	}
 
-	public int saveUserCreds(User user) {
+	public int SaveUserCreds(User user) {
 		int result1 = -1;
 		try {
 
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			String sql1;
+			String sql1, sql2;
 			String username = user.getUsername();
 			String pwd = user.getPwd();
 			sql1 = "INSERT INTO usercreds(username,pwd)"
@@ -282,7 +282,8 @@ public class Controller {
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			
+			Statement st = conn.createStatement();
+
 			String sql1;
 			String username = board.getUsername();
 			String privacy = board.getPrivacy();
@@ -354,7 +355,7 @@ public class Controller {
 			String sql1, sql2, sql3;
 			String team_name = team1.getTeam_name();
 			String team_description = team1.getTeam_description();
-			
+			List<String> team_members = team1.getTeam_members();
 			String team_visibility = "PUBLIC";
 
 			sql1 = "INSERT INTO team(team_id,team_name,team_description,team_visibility)"
@@ -698,7 +699,8 @@ public class Controller {
 			MysqlCon connection = new MysqlCon();
 
 			Connection conn = connection.EstCon();
-			
+			Statement st = conn.createStatement();
+			String sql1;
 			Statement st2 = conn.createStatement();
 			String qu2 = "select team_id from team where team_name = '" + tname + "';";
 			res2 = st2.executeQuery(qu2);
