@@ -29,7 +29,7 @@ public class Controller {
 		return result;
 	}
 
-	public int SaveUserDetails(User user) {
+	public int saveUserDetails(User user) {
 		int result1 = -1;
 		try {
 
@@ -62,7 +62,7 @@ public class Controller {
 		return result1;
 	}
 
-	public int SaveUserCreds(User user) {
+	public int saveUserCreds(User user) {
 		int result1 = -1;
 		try {
 
@@ -355,7 +355,7 @@ public class Controller {
 			String sql1, sql2, sql3;
 			String team_name = team1.getTeam_name();
 			String team_description = team1.getTeam_description();
-			List<String> team_members = team1.getTeam_members();
+			//List<String> team_members = team1.getTeam_members();
 			String team_visibility = "PUBLIC";
 
 			sql1 = "INSERT INTO team(team_id,team_name,team_description,team_visibility)"
