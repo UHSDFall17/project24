@@ -123,7 +123,7 @@ public class Login {
 		lblWelcomeToTrello.setForeground(new Color(0, 51, 102));
 		lblWelcomeToTrello.setHorizontalAlignment(SwingConstants.CENTER);
 		lblWelcomeToTrello.setFont(new Font("Gill Sans Ultra Bold Condensed", Font.BOLD, 35));
-		lblWelcomeToTrello.setBounds(295, 28, 596, 169);
+		lblWelcomeToTrello.setBounds(118, 0, 596, 169);
 		panel.add(lblWelcomeToTrello);
 
 		username = new JTextField();
@@ -147,6 +147,26 @@ public class Login {
 		lblPassword.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
 		lblPassword.setBounds(221, 399, 193, 38);
 		panel.add(lblPassword);
+		
+		JButton btnCooperateUsersClick = new JButton("CO-OPERATE USERS CLICK HERE");
+		btnCooperateUsersClick.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				Coporate cpr = new Coporate();
+				cpr.setVisible(true);
+			}
+		});
+		btnCooperateUsersClick.setForeground(new Color(0, 51, 102));
+		btnCooperateUsersClick.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
+		btnCooperateUsersClick.setBackground(Color.WHITE);
+		btnCooperateUsersClick.setBounds(196, 158, 469, 48);
+		panel.add(btnCooperateUsersClick);
+		
+		JLabel lblOthers = new JLabel("Others");
+		lblOthers.setHorizontalAlignment(SwingConstants.CENTER);
+		lblOthers.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
+		lblOthers.setBounds(432, 232, 193, 38);
+		panel.add(lblOthers);
 /*
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(Login.class.getResource("/Group24/Trello/Capture.JPG")));

@@ -19,6 +19,7 @@ public class Controller {
 			String username1 = user.getUsername();
 			String pwd1 = user.getPwd();
 			sql1 = "Select username from usercreds where username = '" + username1 + "' and pwd='" + pwd1 + "'";
+			
 			ResultSet results = st.executeQuery(sql1); //where ps is Object of PreparedStatement
 
 			result = results.next();
@@ -29,6 +30,50 @@ public class Controller {
 		return result;
 	}
 
+	public boolean checkForCop(User user) {
+		boolean result = false;
+		try {
+
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+
+			Statement st = conn.createStatement();
+			String sql1;
+			String username1 = user.getUsername();
+			String pwd1 = user.getPwd();
+			sql1 = "Select username from usercreds where username = '" + username1 + "' and pwd='" + pwd1 + "'";
+			
+			ResultSet results = st.executeQuery(sql1); //where ps is Object of PreparedStatement
+
+			result = results.next();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public ResultSet checkForCopuser(String username1) {
+		ResultSet rs = null;
+		try {
+
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+
+			Statement st = conn.createStatement();
+			String sql1;
+			sql1 = "Select is_corp from usercreds where username = '" + username1 + "' ;";
+			rs = st.executeQuery(sql1); //where ps is Object of PreparedStatement
+
+			//   System.out.println(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	
 	public int saveUserDetails(User user) {
 		int result1 = -1;
 		try {
@@ -72,11 +117,12 @@ public class Controller {
 			String sql1, sql2;
 			String username = user.getUsername();
 			String pwd = user.getPwd();
-			sql1 = "INSERT INTO usercreds(username,pwd)"
-					+ "VALUES(?,?)";
+			sql1 = "INSERT INTO usercreds(username,pwd,is_corp)"
+					+ "VALUES(?,?,?)";
 			PreparedStatement pstmt1 = conn.prepareStatement(sql1);
 			pstmt1.setString(2, pwd);
 			pstmt1.setString(1, username);
+			pstmt1.setString(3, "N");
 			result1 = pstmt1.executeUpdate();
 
 
@@ -85,6 +131,46 @@ public class Controller {
 			System.out.println(e.getMessage());
 		}
 		return result1;
+	}
+	
+	public ResultSet team () {
+		ResultSet res = null;
+		try {
+
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+
+			Statement st = conn.createStatement();
+			String sql1;
+			sql1 = "SELECT team_name FROM team;";
+			res = st.executeQuery(sql1); //where ps is Object of PreparedStatement
+
+			//   System.out.println(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	public ResultSet board() {
+		ResultSet res = null;
+		try {
+
+			MysqlCon connection = new MysqlCon();
+
+			Connection conn = connection.EstCon();
+
+			Statement st = conn.createStatement();
+			String sql1;
+			sql1 = "SELECT BoardName FROM board;";
+			res = st.executeQuery(sql1); //where ps is Object of PreparedStatement
+
+			//   System.out.println(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	public boolean checkForExistingUser(String username1) {

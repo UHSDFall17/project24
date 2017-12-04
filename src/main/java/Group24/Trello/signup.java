@@ -191,5 +191,15 @@ public class signup extends JFrame {
 		button.setBackground(Color.WHITE);
 		button.setBounds(405, 456, 176, 48);
 		panel.add(button);
+		
+		JLabel lblShouldBe = new JLabel("Should be 8 digits/characters");
+		lblShouldBe.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		lblShouldBe.setBounds(166, 400, 243, 20);
+		panel.add(lblShouldBe);
+		
+		JLabel lblShouldBe_1 = new JLabel("Should be 10 digits");
+		lblShouldBe_1.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		lblShouldBe_1.setBounds(248, 295, 176, 20);
+		panel.add(lblShouldBe_1);
 	}
 }
